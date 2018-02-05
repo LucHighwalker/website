@@ -1,0 +1,9 @@
+img { display: block; margin: 0 auto; }
+
+.background {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: auto;
+    opacity: 0.25;
+}

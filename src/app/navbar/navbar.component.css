@@ -1,0 +1,56 @@
+.navbar_background {
+    position: fixed;
+    top: -50px;
+    z-index: 1000;
+    background-color: grey;
+    opacity: 0.5;
+    height: 100px;
+    width: 100%;
+}
+
+.main_navbar {
+    position: fixed;
+    top: 0px;
+    z-index: 1100;
+    height: 50px;
+    width: 100%;
+    cursor: default;
+}
+
+.indicator {
+    position: fixed;
+    top: 11.5px;
+    height: 25px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: grey;
+    opacity: 0.5;
+}
+
+.navigation {
+    min-width: 420px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.navigation_button {
+    position: relative;
+    padding-top: 12.5px;
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+}
+
+.navigation_button:hover {
+    color: darkgrey;
+    cursor: pointer;
+}
+
+.selected {
+    color: darkgrey;
+    /*background-color: red;*/
+}

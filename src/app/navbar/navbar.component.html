@@ -1,0 +1,27 @@
+<div class="navbar_background"
+     [@enterBG]=true></div>
+
+<div class="indicator"
+     [@enterIndicator]="activePage"
+     [@shiftIndicator]="activePage">
+</div>
+
+<div class="main_navbar"
+     [@enterNav]=true>
+
+     <div class="navigation">
+
+        <div class="navigation_button"
+             [class.selected]="activePage === 0"
+             (click)="setPage(0)">home</div>
+        <div class="navigation_button"
+             [class.selected]="activePage === 1"
+             (click)="setPage(1)">about</div>
+        <div class="navigation_button"
+             [class.selected]="activePage === 2"
+             (click)="setPage(2)">projects</div>
+        <div class="navigation_button"
+             [class.selected]="activePage === 3"
+             (click)="setPage(3)">contact</div>
+    </div>
+</div>

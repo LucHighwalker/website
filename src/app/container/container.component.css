@@ -1,0 +1,28 @@
+* {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
+
+p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.btn {
+    position: fixed;
+    top: 50%;
+}
+
+.btn.next{
+    right: 0;
+}
+
+.main_container {
+    top: 30px;
+}
