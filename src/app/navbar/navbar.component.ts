@@ -10,17 +10,17 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
       trigger('enterBG', [
         transition('void => *', [
-            animate(500, keyframes([
+            animate('0.5s ease-in', keyframes([
                 style({opacity: 0, transform: 'translateY(-100px)', offset: 0}),
-                style({opacity: 0.5, transform: 'translateY(10px)', offset: 0.75}),
-                style({opacity: 0.5, transform: 'translateY(0)', offset: 1}),
+                style({opacity: 0.75, transform: 'translateY(10px)', offset: 0.75}),
+                style({opacity: 1, transform: 'translateY(0)', offset: 1}),
             ]))
         ])
       ]),
       
       trigger('enterNav', [
         transition('void => *', [
-            animate(750, keyframes([
+            animate('0.75s 0.99s ease-in', keyframes([
                 style({opacity: 0, transform: 'translateY(-100px)', offset: 0}),
                 style({opacity: 0.5, transform: 'translateY(10px)', offset: 0.75}),
                 style({opacity: 1, transform: 'translateY(0)', offset: 1}),
@@ -30,10 +30,10 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       
       trigger('enterIndicator', [
         transition('void => *', [
-            animate(1000, keyframes([
+            animate('1s ease-in', keyframes([
                 style({opacity: 0, offset: 0}),
                 style({opacity: 0, offset: 0.5}),
-                style({opacity: 0.5, offset: 1}),
+                style({opacity: 1, offset: 1}),
             ]))
         ])
       ]),
@@ -51,7 +51,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
           state('3', style({
               transform: 'translateX(312px)'
           })),
-          transition('* => *', animate('0.5s ease')),
+          transition('* => *', animate('0.35s ease')),
       ]),
       
       trigger('shiftIndicator2', [

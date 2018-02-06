@@ -1,30 +1,30 @@
 .navbar_background {
     position: fixed;
-    top: -50px;
+    top: -60px;
     z-index: 1000;
-    background-color: grey;
-    opacity: 0.5;
+    background-color: black;
     height: 100px;
     width: 100%;
+}
+
+.indicator {
+    position: fixed;
+    top: 5px;
+    z-index: 1100;
+    height: 35px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #393939;
 }
 
 .main_navbar {
     position: fixed;
     top: 0px;
-    z-index: 1100;
+    z-index: 1200;
     height: 50px;
     width: 100%;
     cursor: default;
-}
-
-.indicator {
-    position: fixed;
-    top: 11.5px;
-    height: 25px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: grey;
-    opacity: 0.5;
 }
 
 .navigation {
@@ -38,7 +38,7 @@
 
 .navigation_button {
     position: relative;
-    padding-top: 12.5px;
+    top: 12.5px;
     display: inline-block;
     text-align: center;
     height: 50px;
