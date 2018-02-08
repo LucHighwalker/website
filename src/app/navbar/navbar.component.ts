@@ -43,13 +43,13 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
               transform: 'translateX(0px)'
           })),
           state('1', style({
-              transform: 'translateX(104px)'
+              transform: 'translateX(105px)'
           })),
           state('2', style({
-              transform: 'translateX(208px)'
+              transform: 'translateX(210px)'
           })),
           state('3', style({
-              transform: 'translateX(312px)'
+              transform: 'translateX(315px)'
           })),
           transition('* => *', animate('0.35s ease')),
       ]),
@@ -83,13 +83,12 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 })
 export class NavbarComponent implements OnInit {
 
-  activePage: number;
-  selected = true;
+  activePage: number = 0;
 
   constructor(private globalData: GlobalData) { }
 
   ngOnInit() {
-      this.activePage = this.globalData.getActivePage();
+      this.globalData.pageChangeSubject.subscribe(page => this.activePage = page);
   }
   
   setPage (page: number) {

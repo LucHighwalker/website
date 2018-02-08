@@ -1,48 +1,111 @@
+<ng-template #homeTemplate>
+    <div class="page home">
+        <h1>Code Monkey.</h1>
+
+        <button (click)="setPage(1)">about</button>
+        <button (click)="setPage(2)">projects</button>
+    </div>
+</ng-template>
+
+<ng-template #aboutTemplate>
+    <div class="page about">
+
+        <h1>Who is Luc Boettner?</h1>
+
+        <button (click)="showPDF(true)">resume</button>
+        <button (click)="setPage(3)">contact</button>
+
+        <div class="description">
+            <img class="image_self" 
+                 src="assets\images\myself.jpg">
+
+            <p>Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there's one thing I have learned throughout this process, is that there is always more to learn.
+                Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge,
+                I'm constantly on the search for opportunities to expand on my skills and portfolio</p>
+        </div>
+
+    </div>
+
+    <div class="pdfViewerBG"
+         [hidden]="displayPDF === false"
+         [@enterPDFBG]="displayPDF"></div>
+    <div class="pdfViewer"
+         [hidden]="displayPDF === false"
+         (click)="showPDF(false)"
+         [@enterPDF]="displayPDF">
+         <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
+    </div>
+
+</ng-template>
+
+<ng-template #projectsTemplate>
+    <h1>Projects</h1>
+
+    <img src="http://dhiglobal.com/wp-content/uploads/2016/07/placeholder.jpg">
+
+    <p>
+        Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried ﻿no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief. Prevailed remainder may propriety can and. 
+    </p>
+</ng-template>
+
+<ng-template #contactTemplate>
+    <div class="page contact">
+        <h1>How to Reach Me.</h1>
+
+        <button class="contact_button"
+                (click)="showPDF(true)">
+            <i class="material-icons">email</i>
+        </button>
+    </div>
+
+    <div class="email_submissionBG"
+         [hidden]="displayPDF === false"
+         [@enterPDFBG]="displayPDF"></div>
+    <div class="email_submission"
+         [hidden]="displayPDF === false"
+         (click)="showPDF(false)">
+    </div>
+    <div class="email_submission_formBG"
+         [hidden]="displayPDF === false"></div>
+    <div class="email_submission_form"
+         [hidden]="displayPDF === false"
+         [@enterPDF]="displayPDF">
+         <input class="email_input input"
+           placeholder="your e-mail">
+        <input class="email_input input"
+               placeholder="subject">
+        <textarea class="email_input body"></textarea>
+
+        <div class="email_submission_form_buttons">
+            <button (click)="showPDF(false)">cancel</button>
+            <button>send</button>
+        </div>
+    </div>
+</ng-template>
+
+
+
 <div class="main_container" 
-    [@enterContainer]="showPage">
+     [@enterContainer]="showPage">
 
-    <div class="sub_container"
-        [hidden]="activePage !== 0">
-        <h1>Home</h1>
+     <app-page class="sub_container"
+          [hidden]="activePage !== 0"
+          [pageTemplate]="homeTemplate">    
+    </app-page>
 
-        <img src="http://dhiglobal.com/wp-content/uploads/2016/07/placeholder.jpg">
+    <app-page class="sub_container"
+              [hidden]="activePage !== 1"
+              [pageTemplate]="aboutTemplate">    
+    </app-page>
 
-        <p>
-            Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried ﻿no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief. Prevailed remainder may propriety can and. 
-        </p>
-    </div>
+    <app-page class="sub_container"
+              [hidden]="activePage !== 2"
+              [pageTemplate]="projectsTemplate">    
+    </app-page>
 
-    <div class="sub_container"
-        [hidden]="activePage !== 1">
-        <h1>About</h1>
-
-        <img src="http://dhiglobal.com/wp-content/uploads/2016/07/placeholder.jpg">
-
-        <p>
-            Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried ﻿no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief. Prevailed remainder may propriety can and. 
-        </p>
-    </div>
-
-    <div class="sub_container"
-        [hidden]="activePage !== 2">
-        <h1>Projects</h1>
-
-        <img src="http://dhiglobal.com/wp-content/uploads/2016/07/placeholder.jpg">
-
-        <p>
-            Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried ﻿no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief. Prevailed remainder may propriety can and. 
-        </p>
-    </div>
-
-    <div class="sub_container"
-        [hidden]="activePage !== 3">
-        <h1>Contact</h1>
-
-        <img src="http://dhiglobal.com/wp-content/uploads/2016/07/placeholder.jpg">
-
-        <p>
-            Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried ﻿no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent. Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief. Prevailed remainder may propriety can and. 
-        </p>
-    </div>
+    <app-page class="sub_container"
+              [hidden]="activePage !== 3"
+              [pageTemplate]="contactTemplate">    
+    </app-page>
 
 </div>

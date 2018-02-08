@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RollerComponent } from './roller/roller.component';
 import { ContainerComponent } from './container/container.component';
+import { PageComponent } from './page/page.component';
 
 import { GlobalData } from './shared/globalData.service';
+import { BackgroundComponent } from './background/background.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { GlobalData } from './shared/globalData.service';
     AppComponent,
     NavbarComponent,
     RollerComponent,
-    ContainerComponent
+    ContainerComponent,
+    PageComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,7 @@
+* {
+    text-align: left;
+}
+
 .navbar_background {
     position: fixed;
     top: -60px;
@@ -5,17 +9,19 @@
     background-color: black;
     height: 100px;
     width: 100%;
+    opacity: 0.1;
 }
 
 .indicator {
     position: fixed;
-    top: 5px;
+    top: 7.5px;
     z-index: 1100;
-    height: 35px;
+    height: 25px;
     width: 100px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #393939;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: white;
+    box-shadow: 0 0 10px 1px #393939;
 }
 
 .main_navbar {
@@ -38,7 +44,7 @@
 
 .navigation_button {
     position: relative;
-    top: 12.5px;
+    top: 12px;
     display: inline-block;
     text-align: center;
     height: 50px;
@@ -52,5 +58,4 @@
 
 .selected {
     color: darkgrey;
-    /*background-color: red;*/
 }
