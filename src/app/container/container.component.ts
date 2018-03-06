@@ -28,7 +28,7 @@ import {GlobalData} from '../shared/globalData.service';
             ])
         ]),
 
-        trigger('enterPDFBG', [
+        trigger('enterBoxBG', [
             state('true', style({
                 opacity: '0.25'
             })),
@@ -38,7 +38,7 @@ import {GlobalData} from '../shared/globalData.service';
             transition('* => *', animate('0.35s ease')),
         ]),
 
-        trigger('enterPDF', [
+        trigger('enterBox', [
             state('true', style({
                 opacity: '1'
             })),
@@ -56,8 +56,8 @@ export class ContainerComponent implements OnInit {
     showPage: number = 0;
 
     //----- about page vars
-    displayPDF: boolean = false;
-    hidePDF: boolean = true;
+    displayBox: boolean = false;
+    hideBox: boolean = true;
 
     constructor(private globalData: GlobalData) {}
 
@@ -69,7 +69,7 @@ export class ContainerComponent implements OnInit {
         this.showPage = page;
         window.setTimeout(() => {
             this.activePage = this.showPage;
-            this.displayPDF = false;
+            this.displayBox = false;
         }, 250);
     }
 
@@ -79,8 +79,8 @@ export class ContainerComponent implements OnInit {
 
     //------ about page functions
 
-    showPDF(bool: boolean) {
-        this.displayPDF = bool;
-        window.setTimeout(() => {this.hidePDF = !this.displayPDF;}, 250);
+    showBox(bool: boolean) {
+        this.displayBox = bool;
+        window.setTimeout(() => {this.hideBox = !this.displayBox;}, 250);
     }
 }

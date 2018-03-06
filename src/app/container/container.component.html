@@ -12,7 +12,7 @@
 
         <h1>Who is Luc Boettner?</h1>
 
-        <button (click)="showPDF(true)">resume</button>
+        <button (click)="showBox(true)">resume</button>
         <button (click)="setPage(3)">contact</button>
 
         <div class="description">
@@ -27,12 +27,12 @@
     </div>
 
     <div class="pdfViewerBG"
-         [hidden]="displayPDF === false"
-         [@enterPDFBG]="displayPDF"></div>
+         [hidden]="displayBox === false"
+         [@enterBoxBG]="displayBox"></div>
     <div class="pdfViewer"
-         [hidden]="displayPDF === false"
-         (click)="showPDF(false)"
-         [@enterPDF]="displayPDF">
+         [hidden]="displayBox === false"
+         (click)="showBox(false)"
+         [@enterBox]="displayBox">
          <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
     </div>
 
@@ -52,24 +52,46 @@
     <div class="page contact">
         <h1>How to Reach Me.</h1>
 
-        <button class="contact_button"
-                (click)="showPDF(true)">
-            <i class="material-icons">email</i>
-        </button>
+        <i class="material-icons">smartphone</i><span>: (831) 295-9263</span>
+        <br>
+        <div class="contact_button_group">
+            <div class="contact_button_div">
+                <button class="contact_button"
+                        (click)="showBox(true)">
+                    <i class="material-icons">email</i>
+                </button>
+                <br>
+                <span>email</span>
+            </div>
+            <div class="contact_button_div">
+                <button class="contact_button"
+                        (click)="showBox(true)">
+                    <i class="material-icons">person</i>
+                </button>
+                <br>
+                <span>facebook</span>
+            </div>
+            <div class="contact_button_div">
+                <button class="contact_button"
+                        (click)="showBox(true)">
+                    <i class="material-icons">people</i>
+                </button>
+                <br>
+                <span>linkedIn</span>
+            </div>
+        </div>
     </div>
 
     <div class="email_submissionBG"
-         [hidden]="displayPDF === false"
-         [@enterPDFBG]="displayPDF"></div>
+         [hidden]="displayBox === false"
+         [@enterBoxBG]="displayBox"></div>
     <div class="email_submission"
-         [hidden]="displayPDF === false"
-         (click)="showPDF(false)">
+         [hidden]="displayBox === false"
+         (click)="showBox(false)">
     </div>
-    <div class="email_submission_formBG"
-         [hidden]="displayPDF === false"></div>
     <div class="email_submission_form"
-         [hidden]="displayPDF === false"
-         [@enterPDF]="displayPDF">
+         [hidden]="displayBox === false"
+         [@enterBox]="displayBox">
          <input class="email_input input"
            placeholder="your e-mail">
         <input class="email_input input"
@@ -77,7 +99,7 @@
         <textarea class="email_input body"></textarea>
 
         <div class="email_submission_form_buttons">
-            <button (click)="showPDF(false)">cancel</button>
+            <button (click)="showBox(false)">cancel</button>
             <button>send</button>
         </div>
     </div>

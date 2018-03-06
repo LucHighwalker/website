@@ -19,16 +19,16 @@ import {GlobalData} from "../shared/globalData.service";
 
         trigger('shiftBG', [
             state('0', style({
-                transform: 'translateX(0px)'
-            })),
-            state('1', style({
                 transform: 'translateX(-50px)'
             })),
-            state('2', style({
+            state('1', style({
                 transform: 'translateX(-100px)'
             })),
-            state('3', style({
+            state('2', style({
                 transform: 'translateX(-150px)'
+            })),
+            state('3', style({
+                transform: 'translateX(-200px)'
             })),
             transition('* => *', animate('1.5s ease')),
         ]),
