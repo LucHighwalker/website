@@ -71,12 +71,34 @@ p {
     height: 100%;
 }
 
+.pdfError {
+    color: #ccffff;
+    position: fixed;
+    z-index: 250;
+    width: 250px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: calc(50% - 125px);
+}
+
+.pdfErrorLink {
+    color: #ccffff;
+    text-decoration: none;
+}
+
+.pdfErrorLink:hover {
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+    text-shadow: none;
+}
+
 .pdf {
     position: relative;
     z-index: 300;
     top: 7.5%;
     width: 65%;
-    min-width: 420px;
+    min-width: 415px;
     height: 85%;
     border-style: solid;
     border-color: white;
@@ -86,23 +108,25 @@ p {
 
 /*----projects----*/
 .page.projects {
-    padding: 20% 0;
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 50px;
 }
 
 /*----contact----*/
 .page.contact {
-    padding: 20% 0;
+    padding: 15% 0;
 }
 
 .contact_button_group {
-    width: 100%;
+    align-content: center;
 }
 
 .contact_button_div {
     float: left;
     margin: 25px;
     position: relative;
-    left: calc(50% - 190px);
+    left: calc(50% - 125px);
     text-align: center;
 }
 
@@ -123,6 +147,12 @@ p {
 .contact_button:active {
     border-style: solid;
     background-color: grey;
+}
+
+.email_link:hover {
+    color: cyan;
+    text-decoration: underline;
+    text-shadow: none;
 }
 
 .email_submissionBG {

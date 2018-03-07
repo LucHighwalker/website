@@ -45,7 +45,7 @@ import {GlobalData} from '../shared/globalData.service';
             state('false', style({
                 opacity: '0'
             })),
-            transition('* => *', animate('1.5s ease')),
+            transition('* => *', animate('0.5s ease')),
         ]),
     ]
 })
