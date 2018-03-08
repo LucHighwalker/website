@@ -56,20 +56,26 @@ export class ContainerComponent implements OnInit {
     showPage: number = 0;
 
     //----- about page vars
-    displayBox: boolean = false;
-    hideBox: boolean = true;
+//    displayBox: boolean = false;
+//    hideBox: boolean = true;
+    
+    showPDF: boolean = false;
 
     constructor(private globalData: GlobalData) {}
 
     ngOnInit() {
         this.globalData.pageChangeSubject.subscribe(page => this.changePage(page));
+        this.globalData.showPDF.subscribe(show => this.showPDF = show);
     }
 
     changePage(page: number) {
         this.showPage = page;
         window.setTimeout(() => {
             this.activePage = this.showPage;
-            this.displayBox = false;
+//            this.displayBox = false;
+            if (this.showPDF === true) {
+                this.globalData.displayPDF(false);
+            }
         }, 250);
     }
 
@@ -80,7 +86,8 @@ export class ContainerComponent implements OnInit {
     //------ about page functions
 
     showBox(bool: boolean) {
-        this.displayBox = bool;
-        window.setTimeout(() => {this.hideBox = !this.displayBox;}, 250);
+//        this.displayBox = bool;
+        this.globalData.displayPDF(bool);
+//        window.setTimeout(() => {this.hideBox = !this.displayBox;}, 250);
     }
 }

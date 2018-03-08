@@ -7,6 +7,7 @@ export class GlobalData {
     private indicatorOffset = '140px';
     
     public pageChangeSubject = new Subject<any>();
+    public showPDF = new Subject<boolean>();
 
     getActivePage() {
         return this.activePage;
@@ -18,6 +19,9 @@ export class GlobalData {
 
     setActivePage(page: number) {
         this.pageChangeSubject.next(page);
-//        this.activePage = page;
+    }
+    
+    displayPDF(show: boolean) {
+        this.showPDF.next(show);
     }
 }

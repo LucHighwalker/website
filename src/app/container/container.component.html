@@ -26,26 +26,7 @@
 
     </div>
     
-    <!--TODO: turn pdf viewer into a component-->
-
-    <div class="pdfViewerBG"
-         [hidden]="displayBox === false"
-         [@enterBoxBG]="displayBox"></div>
-    <div class="pdfViewer"
-         [hidden]="displayBox === false"
-         (click)="showBox(false)"
-         [@enterBox]="displayBox">
-         <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
-    </div>
-
-    <div class="pdfError"
-         [hidden]="displayBox === false"
-         [@enterBox]="displayBox">
-        <span>Resume not showing?</span>
-        <br>
-        <a class="pdfErrorLink" href="assets\pdf\LucBoettnerResume.pdf" target="_blank">click here</a>
-    </div>
-
+    <app-pdf-viewer></app-pdf-viewer>
 </ng-template>
 
 <ng-template #projectsTemplate>
@@ -91,8 +72,8 @@
         </div>
     </div>
 
-    <!--TODO: Create components for these-->
-    <div class="email_submissionBG"
+    <!--TODO: Create component for these-->
+<!--    <div class="email_submissionBG"
          [hidden]="displayBox === false"
          [@enterBoxBG]="displayBox"></div>
     <div class="email_submission"
@@ -112,7 +93,7 @@
         <button (click)="showBox(false)">cancel</button>
         <button>send</button>
     </div>
-</div>
+</div>-->
 </ng-template>
 
 

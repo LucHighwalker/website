@@ -12,6 +12,7 @@ import { PageComponent } from './page/page.component';
 import { GlobalData } from './shared/globalData.service';
 import { BackgroundComponent } from './background/background.component';
 import { ProjectComponent } from './project/project.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProjectComponent } from './project/project.component';
     ContainerComponent,
     PageComponent,
     BackgroundComponent,
-    ProjectComponent
+    ProjectComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,

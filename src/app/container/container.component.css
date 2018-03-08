@@ -51,61 +51,6 @@ p {
     box-shadow: 0 0 10px 1px #393939;
 }
 
-.pdfViewerBG {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.25;
-    width: 100%;
-    height: 100%;
-}
-
-.pdfViewer {
-    position: fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.pdfError {
-    color: #ccffff;
-    position: fixed;
-    z-index: 250;
-    width: 250px;
-    height: 50px;
-    top: calc(50% - 25px);
-    left: calc(50% - 125px);
-}
-
-.pdfErrorLink {
-    color: #ccffff;
-    text-decoration: none;
-}
-
-.pdfErrorLink:hover {
-    color: grey;
-    text-decoration: underline;
-    cursor: pointer;
-    text-shadow: none;
-}
-
-.pdf {
-    position: relative;
-    z-index: 300;
-    top: 7.5%;
-    width: 65%;
-    min-width: 415px;
-    height: 85%;
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    box-shadow: 0 0 25px 5px #393939;
-}
-
 /*----projects----*/
 .page.projects {
     position: relative;

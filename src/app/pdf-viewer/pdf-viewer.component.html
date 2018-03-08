@@ -1,0 +1,17 @@
+<div class="pdfViewerBG"
+     [hidden]="showPDF === false"
+     [@enterBoxBG]="showPDF"></div>
+<div class="pdfViewer"
+     [hidden]="showPDF === false"
+     [@enterBox]="showPDF"
+     (click)="hidePDF()">
+     <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
+</div>
+
+<div class="pdfError"
+     [hidden]="showPDF === false"
+     [@enterBox]="showPDF">
+     <span>Resume not showing?</span>
+    <br>
+    <a class="pdfErrorLink" href="assets\pdf\LucBoettnerResume.pdf" target="_blank">click here</a>
+</div>
