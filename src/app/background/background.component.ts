@@ -41,7 +41,7 @@ export class BackgroundComponent implements OnInit {
     constructor(private globalData: GlobalData) {}
 
     ngOnInit() {
-        this.globalData.pageChangeSubject.subscribe(page => this.activePage = page);
+        this.globalData.pageChange.subscribe(page => this.activePage = page);
     }
 
 }

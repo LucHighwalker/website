@@ -13,6 +13,7 @@ import { GlobalData } from './shared/globalData.service';
 import { BackgroundComponent } from './background/background.component';
 import { ProjectComponent } from './project/project.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
+import { EmailSubmissionComponent } from './email-submission/email-submission.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
     PageComponent,
     BackgroundComponent,
     ProjectComponent,
-    PdfViewerComponent
+    PdfViewerComponent,
+    EmailSubmissionComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
 
         <h1>Who am I?</h1>
 
-        <button (click)="showBox(true)">resume</button>
+        <button (click)="displayPDF(true)">resume</button>
         <button (click)="setPage(3)">contact</button>
 
         <div class="description">
@@ -50,12 +50,12 @@
         <br>
         <i class="material-icons">email</i>
         <span>: </span><span class="email_link"
-                             (click)="showBox(true)">luc.highwalker@gmail.com</span>
+                             (click)="displayEmail(true)">luc.highwalker@gmail.com</span>
         <br>
         <div class="contact_button_group">
             <div class="contact_button_div">
                 <button class="contact_button"
-                        (click)="showBox(true)">
+                        (click)="displayEmail(true)">
                     <i class="material-icons">person</i>
                 </button>
                 <br>
@@ -63,7 +63,7 @@
             </div>
             <div class="contact_button_div">
                 <button class="contact_button"
-                        (click)="showBox(true)">
+                        (click)="displayEmail(true)">
                     <i class="material-icons">people</i>
                 </button>
                 <br>
@@ -71,29 +71,8 @@
             </div>
         </div>
     </div>
-
-    <!--TODO: Create component for these-->
-<!--    <div class="email_submissionBG"
-         [hidden]="displayBox === false"
-         [@enterBoxBG]="displayBox"></div>
-    <div class="email_submission"
-         [hidden]="displayBox === false"
-         (click)="showBox(false)">
-</div>
-<div class="email_submission_form"
-     [hidden]="displayBox === false"
-     [@enterBox]="displayBox">
-     <input class="email_input input"
-       placeholder="your e-mail">
-    <input class="email_input input"
-           placeholder="subject">
-    <textarea class="email_input body"></textarea>
-
-    <div class="email_submission_form_buttons">
-        <button (click)="showBox(false)">cancel</button>
-        <button>send</button>
-    </div>
-</div>-->
+    
+    <app-email-submission></app-email-submission>
 </ng-template>
 
 

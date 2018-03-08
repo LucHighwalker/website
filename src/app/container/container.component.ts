@@ -64,7 +64,7 @@ export class ContainerComponent implements OnInit {
     constructor(private globalData: GlobalData) {}
 
     ngOnInit() {
-        this.globalData.pageChangeSubject.subscribe(page => this.changePage(page));
+        this.globalData.pageChange.subscribe(page => this.changePage(page));
         this.globalData.showPDF.subscribe(show => this.showPDF = show);
     }
 
@@ -85,9 +85,11 @@ export class ContainerComponent implements OnInit {
 
     //------ about page functions
 
-    showBox(bool: boolean) {
-//        this.displayBox = bool;
+    displayPDF(bool: boolean) {
         this.globalData.displayPDF(bool);
-//        window.setTimeout(() => {this.hideBox = !this.displayBox;}, 250);
+    }
+
+    displayEmail(bool: boolean) {
+        this.globalData.displayEmail(bool);
     }
 }
