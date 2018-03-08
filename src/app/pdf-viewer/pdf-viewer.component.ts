@@ -31,10 +31,10 @@ import {GlobalData} from "../shared/globalData.service";
 
         trigger('enterError', [
             state('1', style({
-                transform: 'translateY(-50px)'
+                transform: 'translateY(100px)'
             })),
             state('0', style({
-                transform: 'translateY(50px)'
+                transform: 'translateY(-100px)'
             })),
             transition('0 => 1', animate('1.5s ease')),
             transition('1 => 0', animate('0.5s ease')),

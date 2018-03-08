@@ -20,7 +20,7 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
                 margin: '0 2.5%'
             })),
             transition('* => *', animate('0.35s ease')),
-        ])
+        ]),
   ]
 })
 export class ProjectComponent implements OnInit {

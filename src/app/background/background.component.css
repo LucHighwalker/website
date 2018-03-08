@@ -1,7 +1,6 @@
 img { 
     display: block; 
     margin: 0 auto; 
-    user-select: none;
 }
 
 .background {
@@ -10,5 +9,11 @@ img {
     height: 130%;
     width: auto;
     min-width: 150%;
-    opacity: 0.25;
+    opacity: 0.35;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }

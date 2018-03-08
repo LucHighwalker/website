@@ -47,6 +47,7 @@
 .error {
     position: relative;
     top: 45%;
+    width: 100%;
     color: red;
     text-shadow: none;
 }
@@ -66,23 +67,22 @@
 
 .pdfError {
     color: white;
-    background-color: grey;
     opacity: 0.9;
     position: fixed;
     z-index: 400;
     width: 215px;
     height: 50px;
-    bottom: -50px;
+    top: -100px;
     right: 0;
 }
 
 .pdfErrorLink {
-    color: #ccffff;
+    color: white;
     text-decoration: none;
 }
 
 .pdfErrorLink:hover {
-    color: grey;
+    color: darkgrey;
     text-decoration: underline;
     cursor: pointer;
     text-shadow: none;

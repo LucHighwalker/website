@@ -12,7 +12,7 @@ import {GlobalData} from "../shared/globalData.service";
             transition('void => *', [
                 animate(750, keyframes([
                     style({opacity: 0, offset: 0}),
-                    style({opacity: 0.25, offset: 1}),
+                    style({opacity: 0.35, offset: 1}),
                 ]))
             ])
         ]),
