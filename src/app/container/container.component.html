@@ -32,11 +32,15 @@
 <ng-template #projectsTemplate>
     <div class="page projects">
         <h1>Projects</h1>
-        <app-project></app-project>
-<!--        <br>
-        <app-project></app-project>
-        <br>
-        <app-project></app-project>-->
+        <app-project [projectID]="0"
+            [project]="{ 
+            title: 'woah it works!',
+            image: 'assets/images/myself.jpg'
+            }"></app-project>
+        
+        <app-project [projectID]="1"></app-project>
+        
+        <app-project [projectID]="2"></app-project>
     </div>
 </ng-template>
 
