@@ -1,0 +1,8 @@
+<div class="gallery_thumbnails">
+    <div class="gallery_thumbnail"
+         *ngFor="let img of images">
+         <img class="thumbnail" 
+         [src]="img"
+         (click)="openGallery(img)">
+    </div>
+</div>

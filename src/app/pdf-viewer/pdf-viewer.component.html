@@ -5,14 +5,17 @@
      [hidden]="showPDF === false"
      [@enterPDF]="showPDF"
      (click)="hidePDF()">
-     <div class="pdfLoader">
+     
+     <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
+</div>
+
+<div class="pdfLoader"
+     [hidden]="showPDF === false">
          <div class="loader"
               [hidden]="showError === true"></div>
          <span class="error"
                [hidden]="showError === false">error loading pdf</span>
     </div>
-     <embed class="pdf" src="assets\pdf\LucBoettnerResume.pdf" type='application/pdf'>
-</div>
 
 <div class="pdfError"
      [@enterError]="showError">

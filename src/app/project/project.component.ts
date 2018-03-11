@@ -13,11 +13,11 @@ import {GlobalData} from '../shared/globalData.service';
   
       trigger('expand', [
             state('0', style({
-                height: '0px',
+                height: '0',
                 transform: 'scale(0, 0)'
             })),
             state('1', style({
-                height: '500px',
+                height: 'auto',
                 transform: 'scale(1, 1)'
             })),
             transition('* => *', animate('0.35s ease')),
@@ -25,9 +25,11 @@ import {GlobalData} from '../shared/globalData.service';
   ]
 })
 export class ProjectComponent implements OnInit {
-
   expanded: boolean = false;
+  showFullView: boolean = false;
   
+  activeImg: string = 'assets/images/navBG.png';
+    
   @Input()
   projectID: number;
   
@@ -49,6 +51,16 @@ export class ProjectComponent implements OnInit {
       if (this.expanded === true) {
           this.globalData.expandProject(this.projectID);
       }
+  }
+  
+  expandImg(img: string) {
+      this.activeImg = img;
+      this.showFullView = true;
+  }
+  
+  closeGallery() {
+      this.activeImg = 'assets/images/navBG.png';
+      this.showFullView = false;
   }
 
 }

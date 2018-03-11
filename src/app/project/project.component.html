@@ -8,11 +8,15 @@
         <h3 class='title_title'>{{project.title}}</h3>
 
     </div>
-    
+
     <div class="dropdown"
          [@expand]="expanded">
-         
-         <p>some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???</p>
+
+         <p>{{project.description}}</p>
+
+        <app-gallery-preview [title]="project.title"
+            [images]="project.gallery"></app-gallery-preview>
 
     </div>
+
 </div>

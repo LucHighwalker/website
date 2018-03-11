@@ -1,0 +1,23 @@
+<div class="gallery_display"
+     [hidden]="showGallery === false">
+
+     <div class="gallery_view_BG"
+     (click)="closeGallery()"></div>
+
+    <div class="gallery_view">
+
+        <h1>{{title}} gallery</h1>
+        
+        <img class="gallery_image" 
+             [src]="image">
+
+        <div class="gallery_thumbnails">
+            <div class="gallery_thumbnail"
+                 *ngFor="let img of images">
+                 <img class="thumbnail" 
+                 [src]="img"
+                 (click)="selectImg(img)">
+            </div>
+        </div>
+    </div>
+</div>

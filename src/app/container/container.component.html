@@ -35,13 +35,18 @@
         <app-project [projectID]="0"
             [project]="{ 
             title: 'woah it works!',
-            image: 'assets/images/myself.jpg'
+            image: 'assets/images/myself.jpg',
+            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
+            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png'],
+            links: ['hurdur', 'hodor']
             }"></app-project>
         
-        <app-project [projectID]="1"></app-project>
+<!--        <app-project [projectID]="1"></app-project>
         
-        <app-project [projectID]="2"></app-project>
+        <app-project [projectID]="2"></app-project>-->
     </div>
+    
+    <app-gallery></app-gallery>
 </ng-template>
 
 <ng-template #contactTemplate>
