@@ -4,6 +4,7 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
 
 import {ProjectInfo} from "./projectInfo";
 import {Project} from "./project.service";
+import {GlobalData} from "../shared/globalData.service";
 
 @Component({
   selector: 'app-project',
@@ -36,14 +37,19 @@ export class ProjectComponent implements OnInit {
   @Input()
   project: ProjectInfo = new ProjectInfo();
 
-  constructor(private service: Project) { }
+  constructor(private service: Project, private globalData: GlobalData) { }
 
   ngOnInit() {
       this.projectID = this.service.assignID(this.project.title);
+      
       this.service.projectSelected.subscribe(id => {
           if (this.expanded === true && this.projectID !== id) {
               this.expanded = false;
           }
+      });
+      
+      this.globalData.pageChange.subscribe(() => {
+          this.expanded = false;
       });
   }
   
@@ -53,15 +59,4 @@ export class ProjectComponent implements OnInit {
           this.service.expandProject(this.projectID);
       }
   }
-  
-  expandImg(img: string) {
-      this.activeImg = img;
-      this.showFullView = true;
-  }
-  
-  closeGallery() {
-      this.activeImg = 'assets/images/navBG.png';
-      this.showFullView = false;
-  }
-
 }

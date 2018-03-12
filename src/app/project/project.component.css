@@ -32,10 +32,11 @@
 }
 
 .title_title {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-right: 25px;
-    top: -70px;
-    text-align: right;
+    text-align: center;
 }
 
 .description {
@@ -43,22 +44,20 @@
 }
 
 .link {
+    color: #239dee;
+    text-shadow: none;
     margin: 25px;
     display: inline-block;
 }
 
-.link_link {
-    color: white;
-    text-shadow: none;
-}
-
-.link_link:hover {
-    color: grey;
+.link:hover {
+    color: darkgrey;
 }
 
 .dropdown {
     position: relative;
     z-index: 500;
+    top: -2px;
     width: 75%;
     margin: 0 auto;
     min-width: 400px;

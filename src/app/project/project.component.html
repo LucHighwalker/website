@@ -3,10 +3,11 @@
 
     <div class="background"></div>
 
-    <img class="title_image" 
+    <img class="title_image"
+         [hidden]="project.image === 'hidden'"
          [src]="project.image">
 
-    <h3 class='title_title'>{{project.title}}</h3>
+    <h3 class="title_title">{{project.title}}</h3>
 
 </div>
 
@@ -17,10 +18,24 @@
 
     <p class="description">{{project.description}}</p>
 
-    <div class="link"
+    <a class="link"
+       href="{{link.link}}" target="_blank"
          *ngFor="let link of project.links">
-         <a class="link_link" href="{{link.link}}" target="_blank">{{link.name}}</a>
-    </div>
+
+         <div [hidden]="link.name !== 'Playstore'">
+            <i class="material-icons">android</i>
+         </div>
+         <div [hidden]="link.name !== 'Git'">
+            <i class="material-icons">code</i>
+         </div>
+         <div [hidden]="link.name !== 'Unity Asset Store'">
+            <i class="material-icons">shopping_cart</i>
+         </div>
+         
+         <span>{{link.name}}</span>
+
+        <!--<a class="link_link" href="{{link.link}}" target="_blank">{{link.name}}</a>-->
+    </a>
 
     <app-gallery-preview [title]="project.title"
         [images]="project.gallery"></app-gallery-preview>

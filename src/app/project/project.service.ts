@@ -10,10 +10,10 @@ export class Project {
 
     assignID(seed: string) {
         var seedrandom = require('seedrandom');
-        var rng = seedrandom(seed);
-        var id = rng();                  
+        var rand = seedrandom(seed);
+        var id = (rand() + '').split('.')[1];       
 
-        return id;
+        return parseInt(id);
     }
 
     expandProject(projID: number) {

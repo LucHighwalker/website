@@ -40,16 +40,16 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       
       trigger('shiftIndicator', [
           state('0', style({
-              transform: 'translateX(0px)'
+              transform: 'translateX(1px)'
           })),
           state('1', style({
-              transform: 'translateX(105px)'
+              transform: 'translateX(106px)'
           })),
           state('2', style({
-              transform: 'translateX(210px)'
+              transform: 'translateX(211px)'
           })),
           state('3', style({
-              transform: 'translateX(315px)'
+              transform: 'translateX(316px)'
           })),
           transition('* => *', animate('0.35s ease')),
       ]),

@@ -33,6 +33,7 @@
 .main_navbar {
     position: fixed;
     bottom: 0px;
+    left: 1px;
     z-index: 1200;
     height: 50px;
     width: 100%;

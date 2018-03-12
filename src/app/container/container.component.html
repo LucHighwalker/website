@@ -37,8 +37,8 @@
              (click)="closeProjects()"></div>
         
         <app-project [project]="{ 
-            title: 'woah it works!',
-            image: 'assets/images/myself.jpg',
+            title: 'This website -> luc.gg',
+            image: 'hidden',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png'],
             links: [{name: 'Playstore', link: 'https://www.google.com'}, {name: 'Git', link: 'https://www.google.com'}]
@@ -63,7 +63,7 @@
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png'],
-            links: [{name: 'im a link', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
+            links: [{name: 'Unity Asset Store', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
             }"></app-project>
     </div>
     
@@ -74,13 +74,13 @@
     <div class="page contact">
         <h1>How to Reach Me.</h1>
 
-        <i class="material-icons">phone_android</i>
+        <i class="material-icons contact_icon">phone_android</i>
         <span>: (831) 295-9263</span>
         <br>
         <br>
-        <i class="material-icons">email</i>
+        <i class="material-icons contact_icon">email</i>
         <span>: </span><span class="email_link"
-                             (click)="displayEmail(true)">luc.highwalker@gmail.com</span>
+                             (click)="displayEmail(true)">email@luc.gg</span>
         <br>
         <div class="contact_button_group">
             <div class="contact_button_div">
