@@ -8,5 +8,6 @@ export class ProjectInfo {
 
 export class Link {
     name: string;
+    icon: string;
     link: string;
 }

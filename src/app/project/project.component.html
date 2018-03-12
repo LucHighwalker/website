@@ -20,21 +20,13 @@
 
     <a class="link"
        href="{{link.link}}" target="_blank"
-         *ngFor="let link of project.links">
+       *ngFor="let link of project.links">
+       
+        <div>
+            <i class="material-icons">{{link.icon}}</i>
+        </div>
 
-         <div [hidden]="link.name !== 'Playstore'">
-            <i class="material-icons">android</i>
-         </div>
-         <div [hidden]="link.name !== 'Git'">
-            <i class="material-icons">code</i>
-         </div>
-         <div [hidden]="link.name !== 'Unity Asset Store'">
-            <i class="material-icons">shopping_cart</i>
-         </div>
-         
-         <span>{{link.name}}</span>
-
-        <!--<a class="link_link" href="{{link.link}}" target="_blank">{{link.name}}</a>-->
+        <span>{{link.name}}</span>
     </a>
 
     <app-gallery-preview [title]="project.title"
