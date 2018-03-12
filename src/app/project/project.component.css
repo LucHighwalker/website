@@ -1,16 +1,21 @@
-.box {
+.background {
+    position: absolute;
+    z-index: -100;
     width: 100%;
-    height: auto;
+    height: 100%;
+    opacity: 0.25;
+    background-color: #393939;
 }
 
 .title {
     position: relative;
+    z-index: 500;
     width: 25%;
     min-width: 300px;
     margin: 0 auto;
     padding-right: 10px;
     margin-top: 25px;
-    height: 50px;
+    height: 70px;
     border-style: solid;
     border-color: white;
     border-width: 2px;
@@ -20,6 +25,7 @@
 
 .title_image {
     position: relative;
+    margin: 10px;
     left: -100px;
     height: 50px;
     width: 50px;
@@ -28,12 +34,31 @@
 .title_title {
     position: relative;
     margin-right: 25px;
-    top: -55px;
+    top: -70px;
     text-align: right;
+}
+
+.description {
+    margin: 25px 50px;
+}
+
+.link {
+    margin: 25px;
+    display: inline-block;
+}
+
+.link_link {
+    color: white;
+    text-shadow: none;
+}
+
+.link_link:hover {
+    color: grey;
 }
 
 .dropdown {
     position: relative;
+    z-index: 500;
     width: 75%;
     margin: 0 auto;
     min-width: 400px;

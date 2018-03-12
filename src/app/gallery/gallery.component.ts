@@ -9,7 +9,7 @@ import {Gallery} from "./gallery.service";
 export class GalleryComponent implements OnInit {
 
   title: string;
-  image: string;
+  image: string = 'assets/images/navBG.png';
   images: string[];
   
   showGallery: boolean = false;

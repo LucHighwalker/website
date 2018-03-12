@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
 import {ProjectInfo} from "./projectInfo";
-import {GlobalData} from '../shared/globalData.service';
+import {Project} from "./project.service";
 
 @Component({
   selector: 'app-project',
@@ -20,7 +20,7 @@ import {GlobalData} from '../shared/globalData.service';
                 height: 'auto',
                 transform: 'scale(1, 1)'
             })),
-            transition('* => *', animate('0.35s ease')),
+            transition('* => *', animate('0.2s ease')),
         ]),
   ]
 })
@@ -36,11 +36,12 @@ export class ProjectComponent implements OnInit {
   @Input()
   project: ProjectInfo = new ProjectInfo();
 
-  constructor(private globalData: GlobalData) { }
+  constructor(private service: Project) { }
 
   ngOnInit() {
-      this.globalData.projectSelected.subscribe(id => {
-          if (this.projectID !== id) {
+      this.projectID = this.service.assignID(this.project.title);
+      this.service.projectSelected.subscribe(id => {
+          if (this.expanded === true && this.projectID !== id) {
               this.expanded = false;
           }
       });
@@ -49,7 +50,7 @@ export class ProjectComponent implements OnInit {
   expand() {
       this.expanded = !this.expanded;
       if (this.expanded === true) {
-          this.globalData.expandProject(this.projectID);
+          this.service.expandProject(this.projectID);
       }
   }
   

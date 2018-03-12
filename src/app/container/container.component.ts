@@ -3,6 +3,7 @@ import {Component, OnInit, TemplateRef} from '@angular/core';
 import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
 import {GlobalData} from '../shared/globalData.service';
+import {Project} from "../project/project.service";
 
 @Component({
     selector: 'app-container',
@@ -62,7 +63,7 @@ export class ContainerComponent implements OnInit {
     showPDF: boolean = false;
     showEmail: boolean = false;
 
-    constructor(private globalData: GlobalData) {}
+    constructor(private globalData: GlobalData, private projService: Project) {}
 
     ngOnInit() {
         this.globalData.pageChange.subscribe(page => this.changePage(page));
@@ -95,5 +96,11 @@ export class ContainerComponent implements OnInit {
 
     displayEmail(bool: boolean) {
         this.globalData.displayEmail(bool);
+    }
+    
+    //------- projects functions
+    
+    closeProjects() {
+        this.projService.closeProjects();
     }
 }

@@ -3,5 +3,10 @@ export class ProjectInfo {
     image: string;
     description: string;
     gallery: string[];
-    links: string[];
+    links: Link[];
+}
+
+export class Link {
+    name: string;
+    link: string;
 }

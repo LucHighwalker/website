@@ -7,7 +7,6 @@ export class GlobalData {
     private indicatorOffset = '140px';
     
     public pageChange = new Subject<number>();
-    public projectSelected = new Subject<number>();
     
     public showPDF = new Subject<boolean>();
     public showEmail = new Subject<boolean>();
@@ -30,9 +29,5 @@ export class GlobalData {
     
     displayEmail(show: boolean) {
         this.showEmail.next(show);
-    }
-    
-    expandProject(projID: number) {
-        this.projectSelected.next(projID);
     }
 }

@@ -1,22 +1,28 @@
-<div class="box">
-    <div class="title"
-         (click)="expand()">
+<div class="title"
+     (click)="expand()">
 
-        <img class="title_image" 
-             [src]="project.image">
+    <div class="background"></div>
 
-        <h3 class='title_title'>{{project.title}}</h3>
+    <img class="title_image" 
+         [src]="project.image">
 
+    <h3 class='title_title'>{{project.title}}</h3>
+
+</div>
+
+<div class="dropdown"
+     [@expand]="expanded">
+
+     <div class="background"></div>
+
+    <p class="description">{{project.description}}</p>
+
+    <div class="link"
+         *ngFor="let link of project.links">
+         <a class="link_link" href="{{link.link}}" target="_blank">{{link.name}}</a>
     </div>
 
-    <div class="dropdown"
-         [@expand]="expanded">
-
-         <p>{{project.description}}</p>
-
-        <app-gallery-preview [title]="project.title"
-            [images]="project.gallery"></app-gallery-preview>
-
-    </div>
+    <app-gallery-preview [title]="project.title"
+        [images]="project.gallery"></app-gallery-preview>
 
 </div>
