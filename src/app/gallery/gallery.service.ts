@@ -10,9 +10,13 @@ export class Gallery {
     
     openGallery(ttl: string, img: string, imgs: string[]) {
         this.title.next(ttl);
-        this.image.next(img);
         this.images.next(imgs);
+        this.image.next(img);
         this.showGallery.next(true);
+    }
+    
+    showImage(img: string) {
+        this.image.next(img);
     }
     
     closeGallery() {

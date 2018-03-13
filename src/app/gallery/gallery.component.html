@@ -1,22 +1,56 @@
-<div class="gallery_display"
-     [hidden]="showGallery === false">
+<div class="gallery_BG"
+     [hidden]="showGallery === false"
+     [@enterGalleryBG]="showGallery"></div>
 
-     <div class="gallery_view_BG"
+<div class="gallery_display"
+     [hidden]="showGallery === false"
+     [@enterGallery]="showGallery">
+
+     <div class="gallery_view_close"
      (click)="closeGallery()"></div>
 
     <div class="gallery_view">
 
         <h1>{{title}} gallery</h1>
-        
-        <img class="gallery_image" 
-             [src]="image">
+
+        <div class="gallery_image">
+            <img class="image" 
+                 [src]="displayImg('current')">
+            <div class="image_controls">
+                <div class="image_barBG"></div>
+                <div class="image_bar">
+                    <div class="image_navigation"
+                         (click)="displayImg('first')">
+                        <i class="material-icons image_icons">first_page</i>
+                    </div>
+                    <div class="image_navigation"
+                         (click)="displayImg('previous')">
+                        <i class="material-icons image_icons">chevron_left</i>
+                    </div>
+                    <div class="image_navigation"
+                         (click)="displayImg('next')">
+                        <i class="material-icons image_icons">chevron_right</i>
+                    </div>
+                    <div class="image_navigation"
+                         (click)="displayImg('last')">
+                        <i class="material-icons image_icons">last_page</i>
+                    </div>
+                    <div class="image_fullscreen">
+                        <a href="{{displayImg('current')}}" target="_blank">
+                            <i class="material-icons image_icons">fullscreen</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="gallery_thumbnails">
             <div class="gallery_thumbnail"
+                 [ngClass]="{'selected': isSelected(img)}"
                  *ngFor="let img of images">
                  <img class="thumbnail" 
-                 [src]="img"
-                 (click)="selectImg(img)">
+                      [src]="img"
+                      (click)="selectImg(img)">
             </div>
         </div>
     </div>

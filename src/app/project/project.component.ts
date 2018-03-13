@@ -21,13 +21,13 @@ import {GlobalData} from "../shared/globalData.service";
                 height: 'auto',
                 transform: 'scale(1, 1)'
             })),
-            transition('* => *', animate('0.2s ease')),
+            transition('* => *', animate('0.35s ease')),
         ]),
   ]
 })
 export class ProjectComponent implements OnInit {
   expanded: boolean = false;
-  showFullView: boolean = false;
+  hideTitleImg: boolean = false;
   
   activeImg: string = 'assets/images/navBG.png';
     
@@ -51,6 +51,11 @@ export class ProjectComponent implements OnInit {
       this.globalData.pageChange.subscribe(() => {
           this.expanded = false;
       });
+      
+      if (this.project.image === undefined) {
+          this.project.image = 'assets/images/navBG.png';
+          this.hideTitleImg = true;
+      }
   }
   
   expand() {

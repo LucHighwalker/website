@@ -59,10 +59,10 @@
 }
 
 .navigation_button:hover {
-    color: darkgrey;
+    color: #23bbff;
     cursor: pointer;
 }
 
 .selected {
-    color: darkgrey;
+    color: #239dee;
 }

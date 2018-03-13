@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 
-import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
+import {trigger, state, style, transition, animate} from '@angular/animations';
 import {GlobalData} from "../shared/globalData.service";
 
 @Component({
