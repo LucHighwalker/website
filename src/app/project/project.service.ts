@@ -9,8 +9,8 @@ export class Project {
     public projectSelected = new Subject<number>();
 
     assignID(seed: string) {
-        var seedrandom = require('seedrandom');
-        var rand = seedrandom(seed);
+        var seeded = require('seedrandom');
+        var rand = seeded(seed);
         var id = (rand() + '').split('.')[1];       
 
         return parseInt(id);

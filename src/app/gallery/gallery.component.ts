@@ -37,7 +37,7 @@ export class GalleryComponent implements OnInit {
 
     title: string;
     imageIndex: number;
-    images: string[] = ['assets/images/navBG.png'];
+    images: string[] = ['assets/images/null.jpg'];
 
     showGallery: boolean = false;
 
@@ -58,7 +58,12 @@ export class GalleryComponent implements OnInit {
     displayImg(arg: string) {
         switch (arg) {
             case 'current':
-                return this.images[this.imageIndex];
+                var ret = this.images[this.imageIndex];
+                if (ret !== undefined) {
+                    return ret;
+                } else {
+                    return 'assets/images/null.jpg'
+                }
 
             case 'first':
                 this.imageIndex = 0;
@@ -87,8 +92,8 @@ export class GalleryComponent implements OnInit {
     selectImg(img: string) {
         this.service.showImage(img);
     }
-    
-    isSelected(img: string) { 
+
+    isSelected(img: string) {
         if (img === this.images[this.imageIndex]) {
             return true;
         } else {

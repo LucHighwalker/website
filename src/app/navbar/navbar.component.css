@@ -58,11 +58,16 @@
     width: 100px;
 }
 
+.navigation_button.selected{
+    color: #239dee;
+}
+
 .navigation_button:hover {
-    color: #23bbff;
+    color: grey;
     cursor: pointer;
 }
 
-.selected {
+.navigation_button.selected:hover {
     color: #239dee;
+    cursor: default;
 }

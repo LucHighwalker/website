@@ -11,6 +11,10 @@ body {
     text-shadow: 2px 2px #393939;
 }
 
+h1 {
+    display: inline-block;
+}
+
 input {
     background: #393939;
     color: white;
@@ -50,10 +54,15 @@ button {
 }
 
 button:hover {
-    color: darkgrey;
+    color: grey;
 }
 
 button:active {
-    color: white;
+    color: #239dee;
     background-color: grey;
+    border-color: #239dee;
+}
+
+.blue {
+    color: #239dee;
 }

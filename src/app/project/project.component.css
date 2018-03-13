@@ -23,6 +23,16 @@
     border-collapse: collapse;
 }
 
+.title:hover {
+    color: grey;
+}
+
+.title:active {
+    color: #239dee;
+    background-color: grey;
+    border-color: #239dee;
+}
+
 .title_image {
     position: relative;
     margin: 10px;

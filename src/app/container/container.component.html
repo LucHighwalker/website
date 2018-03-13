@@ -1,6 +1,8 @@
 <ng-template #homeTemplate>
     <div class="page home">
-        <h1>Code Monkey.</h1>
+        <div>
+            <h1 class="blue">Code&nbsp;</h1> <h1>Monkey.</h1>
+        </div>
 
         <button (click)="setPage(1)">about</button>
         <button (click)="setPage(2)">projects</button>
@@ -10,7 +12,9 @@
 <ng-template #aboutTemplate>
     <div class="page about">
 
-        <h1>Who am I?</h1>
+        <div>
+            <h1>Who&nbsp;</h1><h1 class="blue">am</h1><h1>&nbsp;I?</h1>
+        </div>
 
         <button (click)="displayPDF(true)">resume</button>
         <button (click)="setPage(3)">contact</button>
@@ -25,54 +29,56 @@
         </div>
 
     </div>
-    
+
     <app-pdf-viewer></app-pdf-viewer>
 </ng-template>
 
 <ng-template #projectsTemplate>
     <div class="page projects">
-        <h1>Projects</h1>
-        
+        <div>
+            <h1 class="blue">Proj</h1><h1>ects</h1>
+        </div>
+
         <div class="projectBackdrop"
              (click)="closeProjects()"></div>
-        
+
         <app-project [project]="{ 
             title: 'This website -> luc.gg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             gallery: [
-                'assets/images/myself.jpg', 
-                'assets/images/whiteBrickBG.jpg', 
-                'assets/images/me.jpg', 
-                'assets/images/glasses.png'
-                ],
+            'assets/images/myself.jpg', 
+            'assets/images/whiteBrickBG.jpg', 
+            'assets/images/me.jpg', 
+            'assets/images/glasses.png'
+            ],
             links: [
-                {
-                    name: 'Playstore', 
-                    icon: 'android', 
-                    link: 'https://www.google.com'
-                }, 
-                {
-                    name: 'Git', 
-                    icon: 'code', 
-                    link: 'https://www.google.com'
-                }
+            {
+            name: 'Playstore', 
+            icon: 'android', 
+            link: 'https://www.google.com'
+            }, 
+            {
+            name: 'Git', 
+            icon: 'code', 
+            link: 'https://www.google.com'
+            }
             ]
             }"></app-project>
-        
+
         <app-project [project]="{ 
             title: 'pretty cool!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             links: [{name: 'im a link', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
             }"></app-project>
-        
+
         <app-project [project]="{ 
             title: 'kudos me!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png']
             }"></app-project>
-        
+
         <app-project [project]="{ 
             title: 'have a smoke!',
             image: 'assets/images/myself.jpg',
@@ -81,21 +87,25 @@
             links: [{name: 'Unity Asset Store', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
             }"></app-project>
     </div>
-    
+
     <app-gallery></app-gallery>
 </ng-template>
 
 <ng-template #contactTemplate>
     <div class="page contact">
-        <h1>How to Reach Me.</h1>
 
-        <i class="material-icons contact_icon">phone_android</i>
-        <span>: (831) 295-9263</span>
+        <div>
+            <h1>How&nbsp;</h1><h1 class="blue">to</h1><h1>&nbsp;Reach&nbsp;</h1><h1 class="blue">Me.</h1>
+        </div>
+        
+        <div>
+            <i class="material-icons contact_icon">phone_android</i><span>&nbsp;: (</span><span class="blue">831</span><span>) 295-9263</span>
+        </div>
         <br>
-        <br>
-        <i class="material-icons contact_icon">email</i>
-        <span>: </span><span class="email_link"
-                             (click)="displayEmail(true)">email@luc.gg</span>
+        <div class="email_link"
+            (click)="displayEmail(true)">
+            <i class="material-icons contact_icon">email</i><span>&nbsp;: </span><span>email@luc.</span><span class="blue">gg</span>
+        </div>
         <br>
         <div class="contact_button_group">
             <div class="contact_button_div">
@@ -116,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
     <app-email-submission></app-email-submission>
 </ng-template>
 

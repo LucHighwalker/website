@@ -55,10 +55,6 @@ export class ContainerComponent implements OnInit {
 
     activePage: number = 0;
     showPage: number = 0;
-
-    //----- about page vars
-//    displayBox: boolean = false;
-//    hideBox: boolean = true;
     
     showPDF: boolean = false;
     showEmail: boolean = false;
