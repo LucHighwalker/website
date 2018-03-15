@@ -7,7 +7,7 @@
          [hidden]="hideTitleImg"
          [src]="project.image">
 
-    <h3 class="title_title">{{project.title}}</h3>
+    <h3 class="title_title" (click)="expand()">{{project.title}}</h3>
 
 </div>
 
@@ -21,8 +21,8 @@
     <a class="link"
        href="{{link.link}}" target="_blank"
        *ngFor="let link of project.links">
-       
-        <div>
+
+       <div>
             <i class="material-icons">{{link.icon}}</i>
         </div>
 

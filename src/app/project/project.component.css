@@ -21,14 +21,15 @@
     border-width: 2px;
     box-shadow: 0 0 10px 1px #393939;
     border-collapse: collapse;
+    cursor: pointer;
 }
 
 .title:hover {
-    color: grey;
+    color: #239dee;
 }
 
 .title:active {
-    color: #239dee;
+    color: grey;
     background-color: grey;
     border-color: #239dee;
 }

@@ -43,8 +43,8 @@
              (click)="closeProjects()"></div>
 
         <app-project [project]="{ 
-            title: 'This website -> luc.gg',
-            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
+            title: 'luc.gg',
+            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
             gallery: [
             'assets/images/myself.jpg', 
             'assets/images/whiteBrickBG.jpg', 
@@ -52,16 +52,11 @@
             'assets/images/glasses.png'
             ],
             links: [
-            {
-            name: 'Playstore', 
-            icon: 'android', 
-            link: 'https://www.google.com'
-            }, 
-            {
-            name: 'Git', 
-            icon: 'code', 
-            link: 'https://www.google.com'
-            }
+                {
+                    name: 'Git', 
+                    icon: 'code', 
+                    link: 'https://www.google.com'
+                }
             ]
             }"></app-project>
 
@@ -84,7 +79,7 @@
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
             gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png'],
-            links: [{name: 'Unity Asset Store', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
+            links: [{name: 'Unity Asset Store', icon: 'shopping_cart', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
             }"></app-project>
     </div>
 
@@ -102,12 +97,13 @@
             <i class="material-icons contact_icon">phone_android</i><span>&nbsp;: (</span><span class="blue">831</span><span>) 295-9263</span>
         </div>
         <br>
-        <div class="email_link"
-            (click)="displayEmail(true)">
+<!--        <div class="email_link"
+            (click)="displayEmail(true)">-->
+        <div>
             <i class="material-icons contact_icon">email</i><span>&nbsp;: </span><span>email@luc.</span><span class="blue">gg</span>
         </div>
         <br>
-        <div class="contact_button_group">
+<!--        <div class="contact_button_group">
             <div class="contact_button_div">
                 <button class="contact_button"
                         (click)="displayEmail(true)">
@@ -124,7 +120,7 @@
                 <br>
                 <span>linkedIn</span>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <app-email-submission></app-email-submission>

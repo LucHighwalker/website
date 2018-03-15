@@ -54,12 +54,11 @@ button {
 }
 
 button:hover {
-    color: grey;
+    color: #239dee;
 }
 
 button:active {
-    color: #239dee;
-    background-color: grey;
+    color: grey;
     border-color: #239dee;
 }
 

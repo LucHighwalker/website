@@ -11,7 +11,9 @@
 
     <div class="gallery_view">
 
-        <h1>{{title}} gallery</h1>
+        <div>
+            <h1>{{title}}</h1> <h1 class="blue">&nbsp;gallery</h1>
+        </div>
 
         <div class="gallery_image">
             <img class="image" 
@@ -49,8 +51,8 @@
                  [ngClass]="{'selected': isSelected(img)}"
                  *ngFor="let img of images">
                  <img class="thumbnail" 
-                      [src]="img"
-                      (click)="selectImg(img)">
+                 [src]="img"
+                 (click)="selectImg(img)">
             </div>
         </div>
     </div>

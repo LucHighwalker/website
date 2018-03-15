@@ -21,6 +21,6 @@ export class Project {
     }
 
     closeProjects() {
-        this.projectSelected.next(-1);
+        this.projectSelected.next(0);
     }
 }
