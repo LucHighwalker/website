@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {trigger, state, style, transition, animate} from '@angular/animations';
 
-import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 import {GlobalData} from "../shared/globalData.service";
 
 @Component({
@@ -9,12 +9,13 @@ import {GlobalData} from "../shared/globalData.service";
     styleUrls: ['./background.component.css'],
     animations: [
         trigger('enterBG', [
-            transition('void => *', [
-                animate(750, keyframes([
-                    style({opacity: 0, offset: 0}),
-                    style({opacity: 0.35, offset: 1}),
-                ]))
-            ])
+            state('0', style({
+                opacity: '0'
+            })),
+            state('1', style({
+                opacity: '0.35'
+            })),
+            transition('0 => 1', animate('2.75s ease-out')),
         ]),
 
         trigger('shiftBG', [
@@ -35,6 +36,8 @@ import {GlobalData} from "../shared/globalData.service";
     ]
 })
 export class BackgroundComponent implements OnInit {
+    image: HTMLImageElement = new Image();
+    bgLoaded: boolean = false;
 
     activePage: number;
 
@@ -42,6 +45,12 @@ export class BackgroundComponent implements OnInit {
 
     ngOnInit() {
         this.globalData.pageChange.subscribe(page => this.activePage = page);
+        
+        this.image.src = 'assets/images/whiteBrickBGblue.jpg';
+        var component = this;
+        this.image.onload = function () {
+            component.bgLoaded = true
+        }
     }
 
 }

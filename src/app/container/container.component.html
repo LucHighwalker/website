@@ -51,8 +51,7 @@
                     icon: 'code', 
                     link: 'https://www.google.com'
                 }
-            ]
-            }"></app-project>
+            ]}"></app-project>
 
         <app-project [project]="{ 
             title: 'pulseDocs',
@@ -64,29 +63,43 @@
                 'assets/images/pulseDocs/pulseDocsSearch.jpg',
                 'assets/images/pulseDocs/pulseDocsLogin.jpg'
             ],
-            links: [{name: 'pulseDocs', icon: 'link', link: 'https://docs.hospitalitypulse.net/#/'}]
-            }"></app-project>
+            links: [
+                {
+                    name: 'pulseDocs', 
+                    icon: 'link', 
+                    link: 'https://docs.hospitalitypulse.net/#/'
+                }
+            ]}"></app-project>
 
         <app-project [project]="{ 
             title: 'kudos me!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
-            }"></app-project>
+            gallery: [
+                'assets/images/myself.jpg', 
+                'assets/images/whiteBrickBG.jpg', 
+                'assets/images/glasses.png'
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'poop',
+            image: 'assets/images/myself.jpg',
+            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
+            gallery: [
+                'assets/images/myself.jpg', 
+                'assets/images/whiteBrickBG.jpg', 
+                'assets/images/glasses.png'
+            ]}"></app-project>
 
         <app-project [project]="{ 
             title: 'have a smoke!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
-            }"></app-project>
-
-        <app-project [project]="{ 
-            title: 'have a smoke!',
-            image: 'assets/images/myself.jpg',
-            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
-            }"></app-project>
+            gallery: [
+                'assets/images/myself.jpg', 
+                'assets/images/whiteBrickBG.jpg', 
+                'assets/images/glasses.png'
+            ]}"></app-project>
         
          <app-project [project]="{ 
             title: 'luc.gg',
@@ -97,8 +110,7 @@
                     icon: 'code', 
                     link: 'https://www.google.com'
                 }
-            ]
-            }"></app-project>
+            ]}"></app-project>
     </div>
 
     <app-gallery></app-gallery>

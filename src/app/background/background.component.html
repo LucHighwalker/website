@@ -1,4 +1,6 @@
-<img class="background" 
-     src="assets\images\whiteBrickBGblue.jpg"
-     [@enterBG]=true
-     [@shiftBG]="activePage">
+<div [hidden]="bgLoaded === false">
+    <img class="background" 
+         src="assets\images\whiteBrickBGblue.jpg"
+         [@enterBG]="bgLoaded"
+         [@shiftBG]="activePage">
+</div>
