@@ -45,12 +45,6 @@
         <app-project [project]="{ 
             title: 'luc.gg',
             description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
-            gallery: [
-            'assets/images/myself.jpg', 
-            'assets/images/whiteBrickBG.jpg', 
-            'assets/images/me.jpg', 
-            'assets/images/glasses.png'
-            ],
             links: [
                 {
                     name: 'Git', 
@@ -61,25 +55,49 @@
             }"></app-project>
 
         <app-project [project]="{ 
-            title: 'pretty cool!',
-            image: 'assets/images/myself.jpg',
-            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            links: [{name: 'im a link', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
+            title: 'pulseDocs',
+            image: 'assets/images/pulseDocs/hospitalityPulse.png',
+            description: 'An application I made during my internship at hospitalityPulse. It displays their api in a table, and allows for editing when logged in.',
+            gallery: [
+                'https://docs.hospitalitypulse.net/images/pulseDocsLogo.png',
+                'https://docs.hospitalitypulse.net/images/pulseDocsHelp.jpeg',
+                'assets/images/pulseDocs/pulseDocsSearch.jpg',
+                'assets/images/pulseDocs/pulseDocsLogin.jpg'
+            ],
+            links: [{name: 'pulseDocs', icon: 'link', link: 'https://docs.hospitalitypulse.net/#/'}]
             }"></app-project>
 
         <app-project [project]="{ 
             title: 'kudos me!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png']
+            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
             }"></app-project>
 
         <app-project [project]="{ 
             title: 'have a smoke!',
             image: 'assets/images/myself.jpg',
             description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/me.jpg', 'assets/images/glasses.png'],
-            links: [{name: 'Unity Asset Store', icon: 'shopping_cart', link: 'https://www.google.com'}, {name: 'im a different link', link: 'https://www.google.com'}]
+            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
+            }"></app-project>
+
+        <app-project [project]="{ 
+            title: 'have a smoke!',
+            image: 'assets/images/myself.jpg',
+            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
+            gallery: ['assets/images/myself.jpg', 'assets/images/whiteBrickBG.jpg', 'assets/images/glasses.png']
+            }"></app-project>
+        
+         <app-project [project]="{ 
+            title: 'luc.gg',
+            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
+            links: [
+                {
+                    name: 'Git', 
+                    icon: 'code', 
+                    link: 'https://www.google.com'
+                }
+            ]
             }"></app-project>
     </div>
 
@@ -97,30 +115,9 @@
             <i class="material-icons contact_icon">phone_android</i><span>&nbsp;: (</span><span class="blue">831</span><span>) 295-9263</span>
         </div>
         <br>
-<!--        <div class="email_link"
-            (click)="displayEmail(true)">-->
         <div>
             <i class="material-icons contact_icon">email</i><span>&nbsp;: </span><span>email@luc.</span><span class="blue">gg</span>
         </div>
-        <br>
-<!--        <div class="contact_button_group">
-            <div class="contact_button_div">
-                <button class="contact_button"
-                        (click)="displayEmail(true)">
-                    <i class="material-icons">person</i>
-                </button>
-                <br>
-                <span>facebook</span>
-            </div>
-            <div class="contact_button_div">
-                <button class="contact_button"
-                        (click)="displayEmail(true)">
-                    <i class="material-icons">people</i>
-                </button>
-                <br>
-                <span>linkedIn</span>
-            </div>
-        </div>-->
     </div>
 
     <app-email-submission></app-email-submission>

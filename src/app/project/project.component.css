@@ -10,8 +10,7 @@
 .title {
     position: relative;
     z-index: 500;
-    width: 25%;
-    min-width: 300px;
+    width: 300px;
     margin: 0 auto;
     padding-right: 10px;
     margin-top: 25px;
@@ -39,7 +38,7 @@
     margin: 10px;
     left: -100px;
     height: 50px;
-    width: 50px;
+    width: auto;
 }
 
 .title_title {

@@ -32,7 +32,7 @@ p {
 
 /*----home----*/
 .page.home {
-    padding: 20% 0;
+    margin: 200px auto;
 }
 
 /*----about----*/
@@ -79,7 +79,7 @@ app-project {
 
 /*----contact----*/
 .page.contact {
-    padding: 15% 0;
+    margin: 200px auto;
 }
 
 .contact_button_group {

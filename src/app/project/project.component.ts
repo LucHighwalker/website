@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 
-import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
+import {trigger, state, style, transition, animate} from '@angular/animations';
 
 import {ProjectInfo} from "./projectInfo";
 import {Project} from "./project.service";
@@ -31,6 +31,8 @@ export class ProjectComponent implements OnInit {
 
     activeImg: string = 'assets/images/navBG.png';
 
+    disabled: boolean = true;
+
     @Input()
     projectID: number;
 
@@ -40,7 +42,7 @@ export class ProjectComponent implements OnInit {
     constructor(private service: Project, private globalData: GlobalData) {}
 
     ngOnInit() {
-        this.projectID = this.service.assignID(this.project.title);
+        this.projectID = this.service.assignID();
 
         this.service.projectSelected.subscribe(id => {
             if (this.expanded === true && this.projectID !== id) {
@@ -52,6 +54,7 @@ export class ProjectComponent implements OnInit {
 
         this.globalData.pageChange.subscribe(() => {
             this.expanded = false;
+            this.disabled = false;
         });
 
         if (this.project.image === undefined) {
@@ -61,10 +64,20 @@ export class ProjectComponent implements OnInit {
     }
 
     expand() {
-        if (this.expanded === false) {
-            this.service.expandProject(this.projectID);
-        } else if (this.expanded === true) {
-            this.service.closeProjects();
+        if (this.disabled === false) {
+            if (this.expanded) {
+                this.service.closeProjects();
+            } else {
+                this.service.expandProject(this.projectID);
+            }
+
+            //workaround to disable false double clicks. TODO: solve root cause.
+            this.disabled = true;
+            window.setTimeout(() => {
+                this.disabled = false;
+            }, 250);
+        } else {
+            console.log('double click prevented by (' + this.projectID + ') ' + this.project.title);
         }
     }
 }
