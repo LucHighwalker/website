@@ -18,6 +18,7 @@ import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 import { EmailSubmissionComponent } from './email-submission/email-submission.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryPreviewComponent } from './gallery-preview/gallery-preview.component';
+import { BlueifyComponent } from './blueify/blueify.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { GalleryPreviewComponent } from './gallery-preview/gallery-preview.compo
     PdfViewerComponent,
     EmailSubmissionComponent,
     GalleryComponent,
-    GalleryPreviewComponent
+    GalleryPreviewComponent,
+    BlueifyComponent
   ],
   imports: [
     BrowserModule,

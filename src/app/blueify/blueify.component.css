@@ -1,0 +1,17 @@
+h1 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+span {
+    line-height: 1.8;
+    margin: 0 3px;
+    word-wrap: normal;
+    display: inline-block;
+}
+
+div {
+    width: 100%;
+    word-wrap: break-word;
+    cursor: default;
+}

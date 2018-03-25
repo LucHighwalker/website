@@ -2,6 +2,11 @@
     width: 0;
 }
 
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Verdana, Geneva, sans-serif;
     margin-top: 0px;
@@ -65,6 +70,10 @@ button:hover {
 button:active {
     color: grey;
     border-color: #239dee;
+}
+
+.inline_display {
+    display: inline-block;
 }
 
 .blue {

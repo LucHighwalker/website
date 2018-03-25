@@ -51,6 +51,7 @@
 
 .description {
     margin: 25px 50px;
+    white-space: pre-wrap;
 }
 
 .link {

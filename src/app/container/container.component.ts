@@ -65,6 +65,10 @@ export class ContainerComponent implements OnInit {
         this.globalData.pageChange.subscribe(page => this.changePage(page));
         this.globalData.showPDF.subscribe(show => this.showPDF = show);
         this.globalData.showEmail.subscribe(show => this.showEmail = show);
+        
+//        this.stringToArray(`Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there's one thing I have learned throughout this process, is that there is always more to learn.
+//                            Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge,
+//                            I'm constantly on the search for opportunities to expand on my skills and portfolio`);
     }
 
     changePage(page: number) {
@@ -98,5 +102,11 @@ export class ContainerComponent implements OnInit {
     
     closeProjects() {
         this.projService.closeProjects();
+    }
+    
+    //------- helpers
+    
+    stringToArray(text: string) {
+        return text.split(" ");
     }
 }

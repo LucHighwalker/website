@@ -43,7 +43,10 @@ p {
 }
 
 .description {
-    display: inline-block;
+    width: 75%;
+    margin: 0 auto;
+    /*width: 100%;*/
+    /*display: inline-block;*/
 }
 
 .image_self {

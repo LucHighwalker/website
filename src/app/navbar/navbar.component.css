@@ -57,17 +57,3 @@
     height: 50px;
     width: 100px;
 }
-
-.navigation_button.selected{
-    color: grey;
-}
-
-.navigation_button:hover {
-    color: #239dee;
-    cursor: pointer;
-}
-
-.navigation_button.selected:hover {
-    color: grey;
-    cursor: default;
-}
