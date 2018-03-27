@@ -6,7 +6,7 @@ img {
 .background {
     position: fixed;
     top: 0;
-    height: 130%;
+    height: 100%;
     width: auto;
     min-width: 150%;
     opacity: 0.35;
