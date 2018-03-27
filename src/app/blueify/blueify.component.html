@@ -1,40 +1,53 @@
+<ng-template #h1Template>
+        <h1 *ngFor="let string of contentArray; index as i;"
+            (mouseenter)="mouseEnter(i)"
+            (mouseleave)="mouseLeave(i)"
+            [@mouseOverH1]="getMouseOver(i)">{{string}}</h1>
+</ng-template>
 
-<div [ngClass]="{'inline_display': inlineDisplay === 'h1'}" 
-    [hidden]="blueifyType !== 'h1'">
-    <h1 *ngFor="let string of contentArray; index as i;"
-          (mouseenter)="mouseEnter(i)"
-          (mouseleave)="mouseLeave(i)"
-          [@mouseOverH1]="getMouseOver(i)">{{string}}</h1>
-</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<div [ngClass]="{'inline_display': inlineDisplay === 'h2'}" 
-    [hidden]="blueifyType !== 'h2'">
-    <h2 *ngFor="let string of contentArray; index as i;"
-          (mouseenter)="mouseEnter(i)"
-          (mouseleave)="mouseLeave(i)"
-          [@mouseOverH2]="getMouseOver(i)">{{string}}</h2>
-</div>
+<ng-template #h2Template>
+        <h2 *ngFor="let string of contentArray; index as i;"
+            (mouseenter)="mouseEnter(i)"
+            (mouseleave)="mouseLeave(i)"
+            [@mouseOverH2]="getMouseOver(i)">{{string}}</h2>
+</ng-template>
 
-<div [ngClass]="{'inline_display': inlineDisplay === 'h3'}" 
-    [hidden]="blueifyType !== 'h3'">
-    <h3 *ngFor="let string of contentArray; index as i;"
-          (mouseenter)="mouseEnter(i)"
-          (mouseleave)="mouseLeave(i)"
-          [@mouseOverH3]="getMouseOver(i)">{{string}}</h3>
-</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<div [ngClass]="{'inline_display': inlineDisplay === 'span'}" 
-    [hidden]="blueifyType !== 'span'">
-    <span *ngFor="let string of contentArray; index as i;"
-          (mouseenter)="mouseEnter(i)"
-          (mouseleave)="mouseLeave(i)"
-          [@mouseOverSpan]="getMouseOver(i)">{{string}}</span>
-</div>
+<ng-template #h3Template>
+        <h3 *ngFor="let string of contentArray; index as i;"
+            (mouseenter)="mouseEnter(i)"
+            (mouseleave)="mouseLeave(i)"
+            [@mouseOverH3]="getMouseOver(i)">{{string}}</h3>
+</ng-template>
 
-<div [ngClass]="{'inline_display': inlineDisplay === 'p'}" 
-    [hidden]="blueifyType !== 'p'">
-    <p *ngFor="let string of contentArray; index as i;"
-          (mouseenter)="mouseEnter(i)"
-          (mouseleave)="mouseLeave(i)"
-          [@mouseOverP]="getMouseOver(i)">{{string}}</p>
-</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<ng-template #spanTemplate>
+        <span *ngFor="let string of contentArray; index as i;"
+            (mouseenter)="mouseEnter(i)"
+            (mouseleave)="mouseLeave(i)"
+            [@mouseOverSpan]="getMouseOver(i)">{{string}}</span>
+</ng-template>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<ng-template #pTemplate>
+        <p *ngFor="let string of contentArray; index as i;"
+            (mouseenter)="mouseEnter(i)"
+            (mouseleave)="mouseLeave(i)"
+            [@mouseOverP]="getMouseOver(i)">{{string}}</p>
+</ng-template>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<ng-container *ngTemplateOutlet="getTemplate(h1Template, h2Template, h3Template, spanTemplate, pTemplate)"></ng-container>

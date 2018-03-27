@@ -1,17 +1,13 @@
-div {
-    width: 100%;
-    word-wrap: break-word;
-    cursor: default;
-}
-
 h1 {
     margin-left: 5px;
     margin-right: 5px;
+    cursor: default;
 }
 
 h2 {
     margin-left: 5px;
     margin-right: 5px;
+    cursor: default;
 }
 
 h3 {
@@ -20,6 +16,7 @@ h3 {
     margin-right: 3px;
     word-wrap: normal;
     display: inline-block;
+    cursor: default;
 }
 
 span {
@@ -27,6 +24,7 @@ span {
     margin: 0 3px;
     word-wrap: normal;
     display: inline-block;
+    cursor: default;
 }
 
 p {
@@ -34,4 +32,5 @@ p {
     margin: 0 3px;
     word-wrap: normal;
     display: inline-block;
+    cursor: default;
 }

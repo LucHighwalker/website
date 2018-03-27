@@ -109,11 +109,7 @@ export class BlueifyComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        this.contentArray = this.stringToArray(this.content);
-    }
-    
-    stringToArray(text: string) {
-        return text.split(" ");
+        this.contentArray = this.content.split(" ");
     }
 
     mouseEnter(index: number) {
@@ -126,5 +122,24 @@ export class BlueifyComponent implements OnInit {
 
     getMouseOver(index: number) {
         return (this.mouseOver[index] || this.overrideHover) ? true : false;
+    }
+    
+    getTemplate(h1: any, h2: any, h3: any, span: any, p: any) {
+        switch (this.blueifyType) {
+            case 'h1':
+                return h1;
+                
+            case 'h2':
+                return h2;
+                
+            case 'h3':
+                return h3;
+                
+            case 'span':
+                return span;
+                
+            case 'p':
+                return p;
+        }
     }
 }
