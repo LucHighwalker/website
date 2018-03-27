@@ -5,8 +5,12 @@
                 [content]="'Code Monkey'"></app-blueify>
         </div>
 
-        <button (click)="setPage(1)">about</button>
-        <button (click)="setPage(2)">projects</button>
+        <app-buttons [text]="'about'"
+            [toDo]="setPage"
+            [value]="1"></app-buttons>
+        <app-buttons [text]="'projects'"
+            [toDo]="setPage"
+            [value]="2"></app-buttons>
     </div>
 </ng-template>
 
@@ -21,12 +25,16 @@
                 [content]="'Who am I?'"></app-blueify>
         </div>
 
-        <button (click)="displayPDF(true)">resume</button>
-        <button (click)="setPage(3)">contact</button>
+        <app-buttons [text]="'resume'"
+            [toDo]="displayPDF"
+            [value]="true"></app-buttons>
+        <app-buttons [text]="'contact'"
+            [toDo]="setPage"
+            [value]="3"></app-buttons>
 
         <div class="description">
             <img class="image_self" 
-                 src="assets\images\myself.jpg">
+                 src="assets\images\jedi.jpg">
             <br>
             <app-blueify [blueifyType]="'p'"
                 [content]="'Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there\'s one thing I have learned throughout this process, is that there is always more to learn. Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge, I\'m constantly on the search for opportunities to expand on my skills and portfolio.'"></app-blueify>
@@ -52,14 +60,8 @@
 
         <app-project [project]="{ 
             title: 'luc.gg',
-            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
-            links: [
-            {
-            name: 'Git', 
-            icon: 'code', 
-            link: 'https://www.google.com'
-            }
-            ]}"></app-project>
+            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site. If you would like a website of similar quality, feel free to contact me.'
+            }"></app-project>
 
         <app-project [project]="{ 
             title: 'pulseDocs',
@@ -81,44 +83,57 @@
 
         <app-project [project]="{ 
             title: 'Unity Assets',
-            image: 'assets/images/myself.jpg',
+            image: 'assets/images/unityLogo.png',
             description: 'A collection of assets created during the Reefer Madness refactor.',
             gallery: [
-            'assets/images/myself.jpg', 
-            'assets/images/whiteBrickBG.jpg', 
-            'assets/images/glasses.png'
-            ]}"></app-project>
-
-        <app-project [project]="{ 
-            title: 'Reefer Madness v2.0',
-            image: 'assets/images/myself.jpg',
-            description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. -n Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store.\nHowever looking back at it now, I just want to rewrite the whole thing again.\n\nThis project was never completed.',
-            gallery: [
-            'assets/images/myself.jpg', 
-            'assets/images/whiteBrickBG.jpg', 
-            'assets/images/glasses.png'
+            'https://d2ujflorbtfzji.cloudfront.net/package-screenshot/f15f941f-8fde-4930-aaa5-6b7d5dbdda2a_scaled.jpg', 
+            'https://d2ujflorbtfzji.cloudfront.net/key-image/3692d5e8-a4a5-4674-ae98-6c1b88258b37.jpg', 
+            'https://d2ujflorbtfzji.cloudfront.net/key-image/d296d7dc-bf23-42c5-91c5-10da1e7e50a8.jpg'
             ],
             links: [
             {
             name: 'Asset Store', 
             icon: 'shopping_cart', 
-            link: 'https://www.google.com'
-            },
+            link: 'https://assetstore.unity.com/publishers/21002'
+            }
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'Reefer Madness v2.0',
+            description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store.\nHowever looking back at it now, I just want to rewrite the whole thing again.\n\nThis project was never completed.',
+            links: [
             {
-            name: 'Git', 
-            icon: 'code', 
+            name: 'GoogleDrive', 
+            icon: 'cloud', 
             link: 'https://www.google.com'
             }
             ]}"></app-project>
 
         <app-project [project]="{ 
             title: 'Reefer Madness',
-            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
+            image: 'https://lh3.googleusercontent.com/JEQx-SL9Ev6UmiDmAJEb3NpObYgmbNsVzCtBOyO2_QnBtujGCL9TBjJ8z1AzZfhN_48=w300-rw',
+            description: 'The initial release of Reefer Madness. A top down zombie shooter. Created mostly as a learning experience, the code is mostly junk as I was still very much a noob. The game needed a complete refactor to fix. But it was published!',
+            gallery: [
+            'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h310-rw', 
+            'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h900-rw', 
+            'https://lh3.googleusercontent.com/RJXk22sVA2Wl4vi5g5v0BOmljK9Ta0zhCFxENFwRHGv-rvXrrXGugAKS_864T_GtBeMW=h900-rw',
+            'https://lh3.googleusercontent.com/iB4DYk2t4AVRQ_kybseY5WI__kCtFkRkGCOapWSiNRpB-VfCrHTeP6DIEm-Z_wM372I=h900-rw',
+            'https://lh3.googleusercontent.com/P-TvPJM0zG2MfQfGedGJKtpXwnglmO-8rhhXTdoahUSsM0LvY5vjAP4tVTUFhI8fOJs=h900-rw',
+            'https://lh3.googleusercontent.com/-GUU49_DH8P1l_A4g3jq9nF3WMii0MSOHIxMU5YsOB_4hn1od4UQrG021OQzg4JCDQ=h900-rw',
+            'https://lh3.googleusercontent.com/30qf-4oEzISr-4emBe9AkNqqXgfX5NJqFrXYRfcsTqP4TX__uNUU4w5VPVBcI5dDCWIE=h900-rw',
+            'https://lh3.googleusercontent.com/r7n9oBRrWiJiSLMbeiZDcSRb-IiGlbBksInpzsiOqCSWGcwRHtiuI1y6Zr3O5Ls1Lw=h900-rw',
+            'https://lh3.googleusercontent.com/PCXFxjtZbz-JMKaeLNqt5kEs-CWk_ZMub41BUejcYO94bn9rRLRVfQGNJiQYniGaqG8Q=h900-rw'
+            ],
             links: [
             {
-            name: 'Git', 
-            icon: 'code', 
-            link: 'https://www.google.com'
+            name: 'PlayStore', 
+            icon: 'android', 
+            link: 'https://play.google.com/store/apps/details?id=com.HighwalkerStudios.ReeferMadnessFree'
+            },
+            {
+            name: 'GoogleDrive', 
+            icon: 'cloud', 
+            link: 'https://drive.google.com/file/d/0B4mjA9U0-MrJNmZFUEJTa29Udm8/view?usp=sharing'
             }
             ]}"></app-project>
     </div>
@@ -139,22 +154,17 @@
 
         <div class="inline_display">
             <i class="material-icons contact_icon">phone_android</i>:&nbsp;
-            <app-blueify [inlineDisplay]="'span'"
-                [blueifyType]="'span'"
-                [content]="'(831) 295-9263'"></app-blueify>
+            <app-blueify [blueifyType]="'span'"
+                [content]="'(831) 200-3298'"></app-blueify>
         </div>
         <br>
         <br>
         <div>
             <i class="material-icons contact_icon">email</i>:&nbsp;
-            <app-blueify [inlineDisplay]="'span'"
-                [blueifyType]="'span'"
-                [content]="'email@luc.gg'"
-                (click)="displayEmail(true)"></app-blueify>
+            <app-blueify [blueifyType]="'span'"
+                [content]="'email@luc.gg'"></app-blueify>
         </div>
     </div>
-
-    <app-email-submission></app-email-submission>
 </ng-template>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

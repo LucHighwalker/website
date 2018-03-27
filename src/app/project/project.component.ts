@@ -35,10 +35,10 @@ import {GlobalData} from "../shared/globalData.service";
                 transform: 'scale(0, 0)'
             })),
             state('1', style({
-                height: 'auto',
                 transform: 'scale(1, 1)'
             })),
-            transition('* => *', animate('0.35s ease')),
+            transition('0 => 1', animate('0.35s ease')),
+            transition('1 => 0', animate('0.75s ease')),
         ]),
     ]
 })

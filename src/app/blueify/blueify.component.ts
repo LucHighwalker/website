@@ -93,9 +93,6 @@ export class BlueifyComponent implements OnInit {
 
     @Input()
     blueifyType: string;
-
-    @Input()
-    inlineDisplay: string;
     
     @Input()
     content: string;

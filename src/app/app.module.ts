@@ -19,6 +19,7 @@ import { EmailSubmissionComponent } from './email-submission/email-submission.co
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryPreviewComponent } from './gallery-preview/gallery-preview.component';
 import { BlueifyComponent } from './blueify/blueify.component';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BlueifyComponent } from './blueify/blueify.component';
     EmailSubmissionComponent,
     GalleryComponent,
     GalleryPreviewComponent,
-    BlueifyComponent
+    BlueifyComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,
