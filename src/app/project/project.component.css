@@ -10,7 +10,7 @@
 .title {
     position: relative;
     z-index: 500;
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     padding-right: 10px;
     margin-top: 25px;
@@ -45,13 +45,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 25px;
+    margin-right: 5px;
     text-align: center;
 }
 
 .description {
     margin: 25px 50px;
-    white-space: pre-wrap;
 }
 
 .link {

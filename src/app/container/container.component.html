@@ -2,7 +2,7 @@
     <div class="page home">
         <div>
             <app-blueify [blueifyType]="'h1'"
-                [content]="['Code', 'Monkey']"></app-blueify>
+                [content]="'Code Monkey'"></app-blueify>
         </div>
 
         <button (click)="setPage(1)">about</button>
@@ -10,12 +10,15 @@
     </div>
 </ng-template>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <ng-template #aboutTemplate>
     <div class="page about">
 
         <div>
             <app-blueify [blueifyType]="'h1'"
-                [content]="['Who', 'am', 'I?']"></app-blueify>
+                [content]="'Who am I?'"></app-blueify>
         </div>
 
         <button (click)="displayPDF(true)">resume</button>
@@ -25,8 +28,8 @@
             <img class="image_self" 
                  src="assets\images\myself.jpg">
 
-            <app-blueify [blueifyType]="'span'"
-                [content]="stringToArray('Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there\'s one thing I have learned throughout this process, is that there is always more to learn. Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge, I\'m constantly on the search for opportunities to expand on my skills and portfolio.')"></app-blueify>
+            <app-blueify [blueifyType]="'p'"
+                [content]="'Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there\'s one thing I have learned throughout this process, is that there is always more to learn. Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge, I\'m constantly on the search for opportunities to expand on my skills and portfolio.'"></app-blueify>
         </div>
 
     </div>
@@ -34,17 +37,21 @@
     <app-pdf-viewer></app-pdf-viewer>
 </ng-template>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <ng-template #projectsTemplate>
     <div class="page projects">
-        <div><app-blueify [blueifyType]="'h1'"
-                [content]="['Projects']"></app-blueify>
+        <div class="projects_title">
+            <app-blueify [blueifyType]="'h1'"
+                [content]="'Projects'"></app-blueify>
         </div>
 
         <div class="projectBackdrop"
              (click)="closeProjects()"></div>
 
         <app-project [project]="{ 
-            title: '1',
+            title: 'luc.gg',
             description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
             links: [
             {
@@ -55,7 +62,7 @@
             ]}"></app-project>
 
         <app-project [project]="{ 
-            title: '12345',
+            title: 'pulseDocs',
             image: 'assets/images/pulseDocs/hospitalityPulse.png',
             description: 'An application I made during my internship at hospitalityPulse. It displays their api in a table, and allows for editing when logged in.',
             gallery: [
@@ -73,9 +80,19 @@
             ]}"></app-project>
 
         <app-project [project]="{ 
-            title: '123456789',
+            title: 'Unity Assets',
             image: 'assets/images/myself.jpg',
-            description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0.\nEverything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store.\nHowever looking back at it now, I just want to rewrite the whole thing again.\n\nThis project was never completed.',
+            description: 'A collection of assets created during the Reefer Madness refactor.',
+            gallery: [
+            'assets/images/myself.jpg', 
+            'assets/images/whiteBrickBG.jpg', 
+            'assets/images/glasses.png'
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'Reefer Madness v2.0',
+            image: 'assets/images/myself.jpg',
+            description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. -n Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store.\nHowever looking back at it now, I just want to rewrite the whole thing again.\n\nThis project was never completed.',
             gallery: [
             'assets/images/myself.jpg', 
             'assets/images/whiteBrickBG.jpg', 
@@ -95,27 +112,7 @@
             ]}"></app-project>
 
         <app-project [project]="{ 
-            title: '1234567891011121314',
-            image: 'assets/images/myself.jpg',
-            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: [
-            'assets/images/myself.jpg', 
-            'assets/images/whiteBrickBG.jpg', 
-            'assets/images/glasses.png'
-            ]}"></app-project>
-
-        <app-project [project]="{ 
-            title: '12345678910111213141516171819',
-            image: 'assets/images/myself.jpg',
-            description: 'some description of this project so that people can read more about it and holy shit reading this is making it hard to breath where the fuck are the periods???',
-            gallery: [
-            'assets/images/myself.jpg', 
-            'assets/images/whiteBrickBG.jpg', 
-            'assets/images/glasses.png'
-            ]}"></app-project>
-
-        <app-project [project]="{ 
-            title: '12345678910111213141516171819202122232425',
+            title: 'Reefer Madness',
             description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site.',
             links: [
             {
@@ -129,29 +126,50 @@
     <app-gallery></app-gallery>
 </ng-template>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <ng-template #contactTemplate>
     <div class="page contact">
 
         <div>
             <app-blueify [blueifyType]="'h1'"
-                [content]="['How', 'to', 'Reach', 'me.']"></app-blueify>
+                [content]="'How to Reach me.'"></app-blueify>
         </div>
 
         <div class="inline_display">
             <i class="material-icons contact_icon">phone_android</i>
             <app-blueify [inlineDisplay]="'span'"
                 [blueifyType]="'span'"
-                [content]="['(831)', '295', '9263']"></app-blueify>
+                [content]="'(831) 295 9263'"></app-blueify>
         </div>
         <br>
+        <br>
         <div>
-            <i class="material-icons contact_icon">email</i><span>&nbsp;: </span><span>email@luc.</span><span class="blue">gg</span>
+            <i class="material-icons contact_icon">email</i>
+            <app-blueify [inlineDisplay]="'span'"
+                [blueifyType]="'span'"
+                [content]="'email@luc.gg'"
+                (click)="displayEmail(true)"></app-blueify>
+            <!--<i class="material-icons contact_icon">email</i><span>&nbsp;: </span><span>email@luc.</span><span class="blue">gg</span>-->
         </div>
     </div>
 
     <app-email-submission></app-email-submission>
 </ng-template>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 <div class="main_container" 

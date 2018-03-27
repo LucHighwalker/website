@@ -11,6 +11,23 @@ import {GlobalData} from "../shared/globalData.service";
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.css'],
     animations: [
+    
+    trigger('mouseOver', [
+            state('0', style({
+                marginBottom: '0',
+                transform: 'scale(1, 1)',
+                color: 'white',
+                borderColor: 'white'
+            })),
+            state('1', style({
+                marginBottom: '5px',
+                transform: 'scale(1.1, 1.1)',
+                color: '#239dee',
+                borderColor: '#239dee'
+            })),
+            transition('0 => 1', animate('0.75s ease')),
+            transition('1 => 0', animate('1.25s ease')),
+        ]),
 
         trigger('expand', [
             state('0', style({
@@ -28,6 +45,7 @@ import {GlobalData} from "../shared/globalData.service";
 export class ProjectComponent implements OnInit {
     expanded: boolean = false;
     hideTitleImg: boolean = false;
+    mouseOver: boolean = false;
 
     activeImg: string = 'assets/images/navBG.png';
 
@@ -63,6 +81,14 @@ export class ProjectComponent implements OnInit {
         }
     }
 
+    mouseEnter() {
+        this.mouseOver = true;
+    }
+
+    mouseLeave() {
+        this.mouseOver = false;
+    }
+    
     expand() {
         if (this.disabled === false) {
             if (this.expanded) {

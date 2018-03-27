@@ -6,8 +6,8 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
     selector: 'app-blueify',
     templateUrl: './blueify.component.html',
     styleUrls: ['./blueify.component.css'],
-    animations: [
-        trigger('mouseOver', [
+    animations: [  
+        trigger('mouseOverH1', [
             state('0', style({
                 marginLeft: '5px',
                 marginRight: '5px',
@@ -24,14 +24,67 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
             transition('1 => 0', animate('1.25s ease')),
         ]),
         
-        trigger('mouseOverSpan', [
+        trigger('mouseOverH2', [
             state('0', style({
+                marginLeft: '5px',
+                marginRight: '5px',
+                transform: 'scale(1, 1)',
                 color: 'white'
             })),
             state('1', style({
+                marginLeft: '10px',
+                marginRight: '10px',
+                transform: 'scale(1.25, 1.25)',
                 color: '#239dee'
             })),
-            transition('0 => 1', animate('0s')),
+            transition('0 => 1', animate('0.75s ease')),
+            transition('1 => 0', animate('1.25s ease')),
+        ]),
+        
+        trigger('mouseOverH3', [
+            state('0', style({
+                marginLeft: '3px',
+                marginRight: '3px',
+                transform: 'scale(1, 1)',
+                color: 'white'
+            })),
+            state('1', style({
+                marginLeft: '5px',
+                marginRight: '5px',
+                transform: 'scale(1.1, 1.1)',
+                color: '#239dee'
+            })),
+            transition('0 => 1', animate('0.75s ease')),
+            transition('1 => 0', animate('1.25s ease')),
+        ]),
+        
+        trigger('mouseOverSpan', [
+            state('0', style({
+                marginLeft: '3px',
+                marginRight: '3px',
+                transform: 'scale(1, 1)',
+                color: 'white'
+            })),
+            state('1', style({
+                marginLeft: '5px',
+                marginRight: '5px',
+                transform: 'scale(1.1, 1.1)',
+                color: '#239dee'
+            })),
+            transition('0 => 1', animate('0.75s ease')),
+            transition('1 => 0', animate('1.25s ease')),
+        ]),
+        
+        trigger('mouseOverP', [
+            state('0', style({
+                transform: 'scale(1, 1)',
+                color: 'white'
+            })),
+            state('1', style({
+                transform: 'scale(1.05, 1.05)',
+                color: '#239dee'
+            })),
+            transition('0 => 1', animate('0.1s')),
             transition('1 => 0', animate('2.35s ease')),
         ]),
     ]
@@ -46,21 +99,25 @@ export class BlueifyComponent implements OnInit {
     
     @Input()
     content: string;
+    
+    @Input()
+    overrideHover: boolean;
 
-    contentIdAssign: number = 0;
     mouseOver: boolean[] = [];
+    contentArray: string[];
 
     constructor() {}
 
     ngOnInit() {
-        
+        this.contentArray = this.stringToArray(this.content);
+    }
+    
+    stringToArray(text: string) {
+        return text.split(" ");
     }
 
     mouseEnter(index: number) {
         this.mouseOver[index] = true;
-//        window.setTimeout(() => {
-//            this.mouseOver[index] = false;
-//        }, 750);
     }
 
     mouseLeave(index: number) {
@@ -68,7 +125,6 @@ export class BlueifyComponent implements OnInit {
     }
 
     getMouseOver(index: number) {
-        return this.mouseOver[index];
+        return (this.mouseOver[index] || this.overrideHover) ? true : false;
     }
-
 }

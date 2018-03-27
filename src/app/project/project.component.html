@@ -1,5 +1,8 @@
 <div class="title"
-     (click)="expand()">
+     (mouseenter)="mouseEnter()"
+     (mouseleave)="mouseLeave()"
+     (click)="expand()"
+     [@mouseOver]="mouseOver">
 
     <div class="background"></div>
 
@@ -16,7 +19,10 @@
 
      <div class="background"></div>
 
-    <p class="description">{{project.description}}</p>
+    <div class="description">
+        <app-blueify [blueifyType]="'p'"
+            [content]="project.description"></app-blueify>
+    </div>
 
     <a class="link"
        href="{{link.link}}" target="_blank"

@@ -75,6 +75,11 @@ p {
     height: 100%;
 }
 
+.projects_title {
+    position: relative;
+    z-index: 300;
+}
+
 app-project {
     position: relative;
     z-index: 200;

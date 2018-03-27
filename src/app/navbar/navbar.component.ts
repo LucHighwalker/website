@@ -35,7 +35,7 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
             })),
             state('1', style({
                 color: '#239dee',
-                transform: 'scale(1.5, 1.5)'
+                transform: 'scale(1.25, 1.25)'
             })),
             transition('0 => 1', animate('0.35s ease')),
             transition('1 => 0', animate('0.75s ease')),
