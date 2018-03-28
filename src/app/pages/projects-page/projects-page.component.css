@@ -1,0 +1,24 @@
+.page.projects {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.projectBackdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.projects_title {
+    position: relative;
+    z-index: 300;
+}
+
+app-project {
+    position: relative;
+    z-index: 200;
+}

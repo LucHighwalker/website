@@ -1,0 +1,42 @@
+.page.contact {
+    margin: 200px auto;
+}
+
+.contact_button_group {
+    align-content: center;
+}
+
+.contact_button_div {
+    float: left;
+    margin: 25px;
+    position: relative;
+    left: calc(50% - 125px);
+    text-align: center;
+}
+
+.contact_button {
+    border-style: none;
+    border-radius: 50%;
+    margin-left: 12.5px;
+    background-color: grey;
+    height: 50px;
+    width: 50px;   
+}
+
+.contact_button:hover {
+    color: white;
+    background-color: darkgrey;
+}
+
+.contact_button:active {
+    border-style: solid;
+    background-color: grey;
+}
+
+.email_link:hover {
+    color: #239dee;
+}
+
+.contact_icon {
+    top: 5px;
+}

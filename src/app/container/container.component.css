@@ -28,14 +28,14 @@ p {
 }
 
 /*----------------pages----------------*/
+/*
 
-
-/*----home----*/
+----home----
 .page.home {
     margin: 200px auto;
 }
 
-/*----about----*/
+----about----
 .page.about {
     position: relative;
     padding-top: 75px;
@@ -45,8 +45,8 @@ p {
 .description {
     width: 75%;
     margin: 0 auto;
-    /*width: 100%;*/
-    /*display: inline-block;*/
+    width: 100%;
+    display: inline-block;
 }
 
 .image_self {
@@ -59,7 +59,7 @@ p {
     box-shadow: 0 0 10px 1px #393939;
 }
 
-/*----projects----*/
+----projects----
 .page.projects {
     position: relative;
     padding-top: 75px;
@@ -85,7 +85,7 @@ app-project {
     z-index: 200;
 }
 
-/*----contact----*/
+----contact----
 .page.contact {
     margin: 200px auto;
 }
@@ -127,4 +127,4 @@ app-project {
 
 .contact_icon {
     top: 5px;
-}
+}*/

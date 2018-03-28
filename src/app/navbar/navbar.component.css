@@ -57,4 +57,5 @@
     height: 50px;
     width: 100px;
     pointer-events: auto;
+    outline: none;
 }

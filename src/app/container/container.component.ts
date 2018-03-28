@@ -1,4 +1,5 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
+import {Router} from '@angular/router';
 
 import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
@@ -51,15 +52,13 @@ import {Project} from "../project/project.service";
     ]
 })
 export class ContainerComponent implements OnInit {
-    direction: string = 'right';
-
     activePage: number = 0;
     showPage: number = 0;
-    
+
     showPDF: boolean = false;
     showEmail: boolean = false;
 
-    constructor(private globalData: GlobalData, private projService: Project) {}
+    constructor(private router: Router, private globalData: GlobalData, private projService: Project) {}
 
     ngOnInit() {
         this.globalData.pageChange.subscribe(page => this.changePage(page));
@@ -70,13 +69,34 @@ export class ContainerComponent implements OnInit {
     changePage(page: number) {
         this.showPage = page;
         window.setTimeout(() => {
-            this.activePage = this.showPage;
+            //            this.activePage = this.showPage;
             if (this.showPDF === true) {
                 this.globalData.displayPDF(false);
             }
             if (this.showEmail === true) {
                 this.globalData.displayEmail(false);
             }
+
+            var url = 'not-found';
+            switch (page) {
+                case 0:
+                url = 'home';
+                    break;
+
+                case 1:
+                url = 'about';
+                    break;
+
+                case 2:
+                url = 'projects';
+                    break;
+
+                case 3:
+                url = 'contact';
+                    break;
+            }
+
+            this.router.navigate(['/', url]);
         }, 250);
     }
 
@@ -93,9 +113,9 @@ export class ContainerComponent implements OnInit {
     displayEmail(bool: boolean) {
         this.globalData.displayEmail(bool);
     }
-    
+
     //------- projects functions
-    
+
     closeProjects() {
         this.projService.closeProjects();
     }

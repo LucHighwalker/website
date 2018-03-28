@@ -76,7 +76,12 @@ export class NavbarComponent implements OnInit {
     constructor(private globalData: GlobalData) {}
 
     ngOnInit() {
-        this.globalData.pageChange.subscribe(page => this.activePage = page);
+        this.globalData.pageChange.subscribe(page => this.changePage(page));
+    }
+    
+    changePage(page: number) {
+        this.activePage = page;
+        console.log(this.activePage);
     }
 
     setPage(page: number) {
