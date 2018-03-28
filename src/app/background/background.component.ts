@@ -46,7 +46,7 @@ export class BackgroundComponent implements OnInit {
     ngOnInit() {
         this.globalData.pageChange.subscribe(page => this.activePage = page);
         
-        this.image.src = 'assets/images/whiteBrickBGblue.jpg';
+        this.image.src = 'assets/images/sunRays.jpg';
         var component = this;
         this.image.onload = function () {
             component.bgLoaded = true
