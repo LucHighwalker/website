@@ -45,33 +45,6 @@ textarea {
     text-align: left;
 }
 
-/*button {
-    color: white;
-    height: 30px;
-    width: 100px;
-    border-style: solid;
-    border-width: 1.5px;
-    border-color: white;
-    background: none;
-    outline: none;
-    margin: 10px;
-    box-shadow: 0 0 10px 1px #393939;
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-}*/
-
-button:hover {
-    color: #239dee;
-}
-
-button:active {
-    color: grey;
-    border-color: #239dee;
-}
-
 .inline_display {
     display: inline-block;
 }
