@@ -102,8 +102,6 @@ export class ProjectComponent implements OnInit {
             window.setTimeout(() => {
                 this.disabled = false;
             }, 250);
-        } else {
-            console.log('double click prevented by (' + this.projectID + ') ' + this.project.title);
         }
     }
 }
