@@ -10,7 +10,6 @@ export class GlobalData {
     public router: Router;
 
     public pageChange = new Subject<number>();
-    public pageFade = new Subject<boolean>();
 
     public showPDF = new Subject<boolean>();
     public showEmail = new Subject<boolean>();
@@ -28,45 +27,40 @@ export class GlobalData {
     }
 
     pageLoaded(page: number) {
-        window.setTimeout(() => {
-            this.pageFade.next(false);
-            this.pageChange.next(page);
-        }, 100);
+        this.pageChange.next(page);
     }
 
     setActivePage(page: number) {
         if (this.router !== undefined) {
             this.pageChange.next(page);
-            this.pageFade.next(true);
-            window.setTimeout(() => {
-                if (this.showPDF) {
-                    this.showPDF.next(false);
-                }
-                if (this.showEmail) {
-                    this.showEmail.next(false);
-                }
 
-                var url = 'not-found';
-                switch (page) {
-                    case 0:
-                        url = 'home';
-                        break;
+            if (this.showPDF) {
+                this.showPDF.next(false);
+            }
+            if (this.showEmail) {
+                this.showEmail.next(false);
+            }
 
-                    case 1:
-                        url = 'about';
-                        break;
+            var url = 'not-found';
+            switch (page) {
+                case 0:
+                    url = 'home';
+                    break;
 
-                    case 2:
-                        url = 'projects';
-                        break;
+                case 1:
+                    url = 'about';
+                    break;
 
-                    case 3:
-                        url = 'contact';
-                        break;
-                }
+                case 2:
+                    url = 'projects';
+                    break;
 
-                this.router.navigate(['/', url]);
-            }, 600);
+                case 3:
+                    url = 'contact';
+                    break;
+            }
+
+            this.router.navigate(['/', url]);
         }
     }
 

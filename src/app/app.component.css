@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 100;
     top: 0;
-    right: 12px;
+    left: 12px;
     margin-right: 25px;
     color: darkgrey;
     opacity: 0.25;

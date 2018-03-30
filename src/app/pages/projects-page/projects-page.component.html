@@ -1,90 +1,96 @@
-<div class="page projects">
-    <div class="projects_title">
-        <app-blueify [blueifyType]="'h1'"
-            [content]="'Projects'"></app-blueify>
+<ng-template #pageTemplate>
+    <div class="page projects">
+        <div class="projects_title">
+            <app-blueify [blueifyType]="'h1'"
+                [content]="'Projects'"></app-blueify>
+        </div>
+
+        <div class="projectBackdrop"
+             (click)="closeProjects()"></div>
+
+        <app-project [project]="{ 
+            title: 'luc.gg',
+            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site. If you would like a quality website, please feel free to contact me.'
+            }"></app-project>
+
+        <app-project [project]="{ 
+            title: 'pulseDocs',
+            image: 'assets/images/pulseDocs/hospitalityPulse.png',
+            description: 'An application I made during my internship at hospitalityPulse. It displays their api in swagger style, and allows for editing when logged in.',
+            gallery: [
+            'https://docs.hospitalitypulse.net/images/pulseDocsLogo.png',
+            'https://docs.hospitalitypulse.net/images/pulseDocsHelp.jpeg',
+            'assets/images/pulseDocs/pulseDocsSearch.jpg',
+            'assets/images/pulseDocs/pulseDocsLogin.jpg'
+            ],
+            links: [
+            {
+            name: 'pulseDocs', 
+            icon: 'link', 
+            link: 'https://docs.hospitalitypulse.net/#/'
+            }
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'Unity Assets',
+            image: 'assets/images/unityLogo.png',
+            description: 'A collection of assets created during the Reefer Madness refactor.',
+            gallery: [
+            'https://d2ujflorbtfzji.cloudfront.net/package-screenshot/f15f941f-8fde-4930-aaa5-6b7d5dbdda2a_scaled.jpg', 
+            'https://d2ujflorbtfzji.cloudfront.net/key-image/3692d5e8-a4a5-4674-ae98-6c1b88258b37.jpg', 
+            'https://d2ujflorbtfzji.cloudfront.net/key-image/d296d7dc-bf23-42c5-91c5-10da1e7e50a8.jpg'
+            ],
+            links: [
+            {
+            name: 'Asset Store', 
+            icon: 'shopping_cart', 
+            link: 'https://assetstore.unity.com/publishers/21002'
+            }
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'Reefer Madness v2.0',
+            description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store. Looking at it now, after my internship, I just want to rewrite the whole thing again.',
+            links: [
+            {
+            name: 'GoogleDrive', 
+            icon: 'cloud', 
+            link: 'https://www.google.com'
+            }
+            ]}"></app-project>
+
+        <app-project [project]="{ 
+            title: 'Reefer Madness',
+            image: 'https://lh3.googleusercontent.com/JEQx-SL9Ev6UmiDmAJEb3NpObYgmbNsVzCtBOyO2_QnBtujGCL9TBjJ8z1AzZfhN_48=w300-rw',
+            description: 'The initial release of Reefer Madness. A top down zombie shooter. Created mostly as a learning experience, the code is mostly junk as I was still very much a noob. The game needed a complete refactor to fix. But it was published!',
+            gallery: [
+            'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h310-rw', 
+            'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h900-rw', 
+            'https://lh3.googleusercontent.com/RJXk22sVA2Wl4vi5g5v0BOmljK9Ta0zhCFxENFwRHGv-rvXrrXGugAKS_864T_GtBeMW=h900-rw',
+            'https://lh3.googleusercontent.com/iB4DYk2t4AVRQ_kybseY5WI__kCtFkRkGCOapWSiNRpB-VfCrHTeP6DIEm-Z_wM372I=h900-rw',
+            'https://lh3.googleusercontent.com/P-TvPJM0zG2MfQfGedGJKtpXwnglmO-8rhhXTdoahUSsM0LvY5vjAP4tVTUFhI8fOJs=h900-rw',
+            'https://lh3.googleusercontent.com/-GUU49_DH8P1l_A4g3jq9nF3WMii0MSOHIxMU5YsOB_4hn1od4UQrG021OQzg4JCDQ=h900-rw',
+            'https://lh3.googleusercontent.com/30qf-4oEzISr-4emBe9AkNqqXgfX5NJqFrXYRfcsTqP4TX__uNUU4w5VPVBcI5dDCWIE=h900-rw',
+            'https://lh3.googleusercontent.com/r7n9oBRrWiJiSLMbeiZDcSRb-IiGlbBksInpzsiOqCSWGcwRHtiuI1y6Zr3O5Ls1Lw=h900-rw',
+            'https://lh3.googleusercontent.com/PCXFxjtZbz-JMKaeLNqt5kEs-CWk_ZMub41BUejcYO94bn9rRLRVfQGNJiQYniGaqG8Q=h900-rw'
+            ],
+            links: [
+            {
+            name: 'PlayStore', 
+            icon: 'android', 
+            link: 'https://play.google.com/store/apps/details?id=com.HighwalkerStudios.ReeferMadnessFree'
+            },
+            {
+            name: 'GoogleDrive', 
+            icon: 'cloud', 
+            link: 'https://drive.google.com/file/d/0B4mjA9U0-MrJNmZFUEJTa29Udm8/view?usp=sharing'
+            }
+            ]}"></app-project>
     </div>
 
-    <div class="projectBackdrop"
-         (click)="closeProjects()"></div>
+    <app-gallery></app-gallery>
+</ng-template>
 
-    <app-project [project]="{ 
-        title: 'luc.gg',
-        description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site. If you would like a quality website, please feel free to contact me.'
-        }"></app-project>
-
-    <app-project [project]="{ 
-        title: 'pulseDocs',
-        image: 'assets/images/pulseDocs/hospitalityPulse.png',
-        description: 'An application I made during my internship at hospitalityPulse. It displays their api in swagger style, and allows for editing when logged in.',
-        gallery: [
-        'https://docs.hospitalitypulse.net/images/pulseDocsLogo.png',
-        'https://docs.hospitalitypulse.net/images/pulseDocsHelp.jpeg',
-        'assets/images/pulseDocs/pulseDocsSearch.jpg',
-        'assets/images/pulseDocs/pulseDocsLogin.jpg'
-        ],
-        links: [
-        {
-        name: 'pulseDocs', 
-        icon: 'link', 
-        link: 'https://docs.hospitalitypulse.net/#/'
-        }
-        ]}"></app-project>
-
-    <app-project [project]="{ 
-        title: 'Unity Assets',
-        image: 'assets/images/unityLogo.png',
-        description: 'A collection of assets created during the Reefer Madness refactor.',
-        gallery: [
-        'https://d2ujflorbtfzji.cloudfront.net/package-screenshot/f15f941f-8fde-4930-aaa5-6b7d5dbdda2a_scaled.jpg', 
-        'https://d2ujflorbtfzji.cloudfront.net/key-image/3692d5e8-a4a5-4674-ae98-6c1b88258b37.jpg', 
-        'https://d2ujflorbtfzji.cloudfront.net/key-image/d296d7dc-bf23-42c5-91c5-10da1e7e50a8.jpg'
-        ],
-        links: [
-        {
-        name: 'Asset Store', 
-        icon: 'shopping_cart', 
-        link: 'https://assetstore.unity.com/publishers/21002'
-        }
-        ]}"></app-project>
-
-    <app-project [project]="{ 
-        title: 'Reefer Madness v2.0',
-        description: 'A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store. Looking at it now, after my internship, I just want to rewrite the whole thing again.',
-        links: [
-        {
-        name: 'GoogleDrive', 
-        icon: 'cloud', 
-        link: 'https://www.google.com'
-        }
-        ]}"></app-project>
-
-    <app-project [project]="{ 
-        title: 'Reefer Madness',
-        image: 'https://lh3.googleusercontent.com/JEQx-SL9Ev6UmiDmAJEb3NpObYgmbNsVzCtBOyO2_QnBtujGCL9TBjJ8z1AzZfhN_48=w300-rw',
-        description: 'The initial release of Reefer Madness. A top down zombie shooter. Created mostly as a learning experience, the code is mostly junk as I was still very much a noob. The game needed a complete refactor to fix. But it was published!',
-        gallery: [
-        'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h310-rw', 
-        'https://lh3.googleusercontent.com/CFjYB1_txicDmwV9KDjWYPQB6RQ6jYUV0YeItyETKGJ8WWQw9FzQfM7QbWh6OFDi_g=h900-rw', 
-        'https://lh3.googleusercontent.com/RJXk22sVA2Wl4vi5g5v0BOmljK9Ta0zhCFxENFwRHGv-rvXrrXGugAKS_864T_GtBeMW=h900-rw',
-        'https://lh3.googleusercontent.com/iB4DYk2t4AVRQ_kybseY5WI__kCtFkRkGCOapWSiNRpB-VfCrHTeP6DIEm-Z_wM372I=h900-rw',
-        'https://lh3.googleusercontent.com/P-TvPJM0zG2MfQfGedGJKtpXwnglmO-8rhhXTdoahUSsM0LvY5vjAP4tVTUFhI8fOJs=h900-rw',
-        'https://lh3.googleusercontent.com/-GUU49_DH8P1l_A4g3jq9nF3WMii0MSOHIxMU5YsOB_4hn1od4UQrG021OQzg4JCDQ=h900-rw',
-        'https://lh3.googleusercontent.com/30qf-4oEzISr-4emBe9AkNqqXgfX5NJqFrXYRfcsTqP4TX__uNUU4w5VPVBcI5dDCWIE=h900-rw',
-        'https://lh3.googleusercontent.com/r7n9oBRrWiJiSLMbeiZDcSRb-IiGlbBksInpzsiOqCSWGcwRHtiuI1y6Zr3O5Ls1Lw=h900-rw',
-        'https://lh3.googleusercontent.com/PCXFxjtZbz-JMKaeLNqt5kEs-CWk_ZMub41BUejcYO94bn9rRLRVfQGNJiQYniGaqG8Q=h900-rw'
-        ],
-        links: [
-        {
-        name: 'PlayStore', 
-        icon: 'android', 
-        link: 'https://play.google.com/store/apps/details?id=com.HighwalkerStudios.ReeferMadnessFree'
-        },
-        {
-        name: 'GoogleDrive', 
-        icon: 'cloud', 
-        link: 'https://drive.google.com/file/d/0B4mjA9U0-MrJNmZFUEJTa29Udm8/view?usp=sharing'
-        }
-        ]}"></app-project>
-</div>
-
-<app-gallery></app-gallery>
+<app-page [pageIndex]="2"
+    [pageTemplate]="pageTemplate">    
+</app-page>

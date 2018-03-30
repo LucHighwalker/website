@@ -31,6 +31,9 @@ import {GlobalData} from "../shared/globalData.service";
             state('3', style({
                 transform: 'translateX(-200px)'
             })),
+            state('4', style({
+                transform: 'translateX(0)'
+            })),
             transition('* => *', animate('1.5s ease')),
         ]),
     ]

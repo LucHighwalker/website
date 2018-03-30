@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-
-import {GlobalData} from '../../shared/globalData.service';
 
 @Component({
   selector: 'app-not-found-page',
@@ -10,13 +7,9 @@ import {GlobalData} from '../../shared/globalData.service';
 })
 export class NotFoundPageComponent implements OnInit {
 
-  constructor(private router: Router, private globalData: GlobalData) { }
+  constructor() { }
 
   ngOnInit() {
-        if (this.globalData.router === undefined) {
-            this.globalData.setRouter(this.router);
-        }
-//        this.globalData.pageLoaded();
   }
 
 }

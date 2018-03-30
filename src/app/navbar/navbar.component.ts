@@ -64,6 +64,9 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
             state('3', style({
                 transform: 'translateX(316px)'
             })),
+            state('4', style({
+                transform: 'translateX(-420px)'
+            })),
             transition('* => *', animate('0.35s ease')),
         ]),
     ]
@@ -80,7 +83,9 @@ export class NavbarComponent implements OnInit {
     }
 
     setPage(page: number) {
-        this.globalData.setActivePage(page);
+        if (this.activePage !== page) {
+            this.globalData.setActivePage(page);
+        }
     }
 
     mouseEnter(index: number) {

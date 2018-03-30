@@ -1,4 +1,4 @@
-<ng-container class="page_container"
-    *ngTemplateOutlet="pageTemplate">
-    
-</ng-container>
+<div class="page_container"
+     [@enterPage]="true">
+     <ng-container *ngTemplateOutlet="pageTemplate"></ng-container>
+</div>

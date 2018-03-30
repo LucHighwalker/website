@@ -1,13 +1,19 @@
-<div class="page home">
-    <div>
-        <app-blueify [blueifyType]="'h1'"
-            [content]="'Web Padawan'"></app-blueify>
-    </div>
+<ng-template #pageTemplate>
+    <div class="page home">
+         <div>
+            <app-blueify [blueifyType]="'h1'"
+                [content]="'Web Padawan'"></app-blueify>
+        </div>
 
-    <app-buttons [text]="'about'"
-        [toDo]="setPage"
-        [value]="1"></app-buttons>
-    <app-buttons [text]="'projects'"
-        [toDo]="setPage"
-        [value]="2"></app-buttons>
-</div>
+        <app-buttons [text]="'about'"
+            [toDo]="setPage"
+            [value]="1"></app-buttons>
+        <app-buttons [text]="'projects'"
+            [toDo]="setPage"
+            [value]="2"></app-buttons>
+    </div>
+</ng-template>
+
+<app-page [pageIndex]="0"
+    [pageTemplate]="pageTemplate">    
+</app-page>
