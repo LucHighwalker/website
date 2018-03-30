@@ -49,7 +49,7 @@ export class ProjectComponent implements OnInit {
 
     activeImg: string = 'assets/images/navBG.png';
 
-    disabled: boolean = true;
+    disabled: boolean = false;
 
     @Input()
     projectID: number;

@@ -39,7 +39,7 @@ export class BackgroundComponent implements OnInit {
     image: HTMLImageElement = new Image();
     bgLoaded: boolean = false;
 
-    activePage: number;
+    activePage: number = 0;
 
     constructor(private globalData: GlobalData) {}
 

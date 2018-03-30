@@ -1,3 +1,11 @@
 .page.not_found {
     margin: 200px auto;
 }
+
+.image {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    margin: 25px;
+    box-shadow: 0 0 10px 1px #393939;
+}

@@ -13,21 +13,16 @@ import {Project} from "../project/project.service";
     animations: [
 
         trigger('enterContainer', [
-            transition('void => *', [
-                animate('1s ease-in', keyframes([
-                    style({opacity: 0, transform: 'translateY(-50px)', offset: 0}),
-                    style({opacity: 0.25, transform: 'translateY(-15px)', offset: 0.5}),
-                    style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.75}),
-                    style({opacity: 1, transform: 'translateY(0)', offset: 1}),
-                ]))
-            ]),
-            transition('* => *', [
-                animate('0.75s ease-out', keyframes([
-                    style({opacity: 1, offset: 0}),
-                    style({opacity: 0, offset: 0.5}),
-                    style({opacity: 1, offset: 1}),
-                ]))
-            ])
+            state('void', style({
+                opacity: '0'
+            })),
+            state('false', style({
+                opacity: '1'
+            })),
+            state('true', style({
+                opacity: '0'
+            })),
+            transition('* => *', animate('0.5s ease')),
         ]),
 
         trigger('enterBoxBG', [
@@ -54,6 +49,8 @@ import {Project} from "../project/project.service";
 export class ContainerComponent implements OnInit {
     activePage: number = 0;
     showPage: number = 0;
+    
+    pageFade: boolean = false;
 
     showPDF: boolean = false;
     showEmail: boolean = false;
@@ -61,43 +58,44 @@ export class ContainerComponent implements OnInit {
     constructor(private router: Router, private globalData: GlobalData, private projService: Project) {}
 
     ngOnInit() {
-        this.globalData.pageChange.subscribe(page => this.changePage(page));
+//        this.globalData.pageChange.subscribe(page => this.changePage(page));
+        this.globalData.pageFade.subscribe(fade => this.pageFade = fade);
         this.globalData.showPDF.subscribe(show => this.showPDF = show);
         this.globalData.showEmail.subscribe(show => this.showEmail = show);
     }
 
     changePage(page: number) {
-        this.showPage = page;
-        window.setTimeout(() => {
-            //            this.activePage = this.showPage;
-            if (this.showPDF === true) {
-                this.globalData.displayPDF(false);
-            }
-            if (this.showEmail === true) {
-                this.globalData.displayEmail(false);
-            }
-
-            var url = 'not-found';
-            switch (page) {
-                case 0:
-                url = 'home';
-                    break;
-
-                case 1:
-                url = 'about';
-                    break;
-
-                case 2:
-                url = 'projects';
-                    break;
-
-                case 3:
-                url = 'contact';
-                    break;
-            }
-
-            this.router.navigate(['/', url]);
-        }, 250);
+//        this.showPage = page;
+//        window.setTimeout(() => {
+//            //            this.activePage = this.showPage;
+//            if (this.showPDF === true) {
+//                this.globalData.displayPDF(false);
+//            }
+//            if (this.showEmail === true) {
+//                this.globalData.displayEmail(false);
+//            }
+//
+//            var url = 'not-found';
+//            switch (page) {
+//                case 0:
+//                url = 'home';
+//                    break;
+//
+//                case 1:
+//                url = 'about';
+//                    break;
+//
+//                case 2:
+//                url = 'projects';
+//                    break;
+//
+//                case 3:
+//                url = 'contact';
+//                    break;
+//            }
+//
+//            this.router.navigate(['/', url]);
+//        }, 250);
     }
 
     setPage(page: number) {
