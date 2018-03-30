@@ -34,3 +34,12 @@ p {
     display: inline-block;
     cursor: default;
 }
+
+a {
+    line-height: 1.8;
+    margin: 0 3px;
+    text-decoration: none;
+    word-wrap: normal;
+    display: inline-block;
+    cursor: pointer;
+}

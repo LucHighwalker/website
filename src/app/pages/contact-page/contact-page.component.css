@@ -38,5 +38,6 @@
 }
 
 .contact_icon {
+    position: relative;
     top: 5px;
 }

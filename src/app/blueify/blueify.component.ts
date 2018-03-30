@@ -121,7 +121,7 @@ export class BlueifyComponent implements OnInit {
         return (this.mouseOver[index] || this.overrideHover) ? true : false;
     }
     
-    getTemplate(h1: any, h2: any, h3: any, span: any, p: any) {
+    getTemplate(h1: any, h2: any, h3: any, span: any, p: any, phone: any, email: any) {
         switch (this.blueifyType) {
             case 'h1':
                 return h1;
@@ -137,6 +137,12 @@ export class BlueifyComponent implements OnInit {
                 
             case 'p':
                 return p;
+                
+            case 'phone':
+                return phone;
+                
+            case 'email':
+                return email;
         }
     }
 }
