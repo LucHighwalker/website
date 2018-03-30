@@ -36,7 +36,4 @@ export class PageComponent implements OnInit {
         }
         this.globalData.pageLoaded(this.pageIndex);
     }
-    
-    
-
 }
