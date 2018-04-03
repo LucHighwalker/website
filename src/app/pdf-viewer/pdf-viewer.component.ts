@@ -45,6 +45,7 @@ import {GlobalData} from "../shared/globalData.service";
 })
 export class PdfViewerComponent implements OnInit {
     showPDF: boolean = false;
+    showAltLink: boolean = false;
     showError: boolean = false;
 
     constructor(private globalData: GlobalData) {}
@@ -58,11 +59,17 @@ export class PdfViewerComponent implements OnInit {
             this.showPDF = true;
             window.setTimeout(() => {
                 if (this.showPDF) {
+                    this.showAltLink = true;
+                }
+            }, 500);
+            window.setTimeout(() => {
+                if (this.showPDF) {
                     this.showError = true;
                 }
             }, 4200);
         } else {
             this.showPDF = false;
+            this.showAltLink = false;
             this.showError = false;
         }
     }

@@ -65,7 +65,7 @@
     box-shadow: 0 0 25px 5px #393939;
 }
 
-.pdfError {
+.pdfAltLink {
     color: white;
     opacity: 0.9;
     position: fixed;
@@ -76,13 +76,13 @@
     right: 0;
 }
 
-.pdfErrorLink {
+.pdfLink {
     color: #239dee;
     text-decoration: underline;
     text-shadow: none;
 }
 
-.pdfErrorLink:hover {
+.pdfLink:hover {
     color: darkgrey;
     text-decoration: underline;
     cursor: pointer;
