@@ -1,16 +1,26 @@
 <ng-template #pageTemplate>
     <div class="page projects">
         <div class="projects_title">
-            <app-blueify [blueifyType]="'h1'"
-                [content]="'Projects'"></app-blueify>
+            <app-blueify [blueifyType]="'h1'" [content]="'Projects'"></app-blueify>
         </div>
 
-        <div class="projectBackdrop"
-             (click)="closeProjects()"></div>
+        <div class="projectBackdrop" (click)="closeProjects()"></div>
+
+        <app-project [project]="{ 
+            title: 'WTFood.menu',
+            image: 'assets/images/WTFoodLogoSmall.png',
+            description: 'A project I started, after having a really hard time finding the menu for a suhi restaurant. Having ended up with a poor quality picture of their menu on their Facebook page. WTFood aims to provide a cheap and easy to use site to manage and display menus online.',
+            links: [
+            {
+                name: 'WTFood.menu',
+                icon: 'fastfood',
+                link: 'https://wtfood.menu/'
+            }
+            ]}"></app-project>
 
         <app-project [project]="{ 
             title: 'luc.gg',
-            description: 'My latest web design, and first experience using Angular. Designed to work well on mobile or desktop, without changing the looks of the site. If you would like a quality website, please feel free to contact me.'
+            description: 'Designed to work well on mobile or desktop, without changing the looks of the site. This site works as my resume.'
             }"></app-project>
 
         <app-project [project]="{ 
@@ -91,6 +101,5 @@
     <app-gallery></app-gallery>
 </ng-template>
 
-<app-page [pageIndex]="2"
-    [pageTemplate]="pageTemplate">    
+<app-page [pageIndex]="2" [pageTemplate]="pageTemplate">
 </app-page>
