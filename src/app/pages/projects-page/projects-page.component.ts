@@ -8,9 +8,14 @@ import {Project} from "../../project/project.service";
 })
 export class ProjectsPageComponent implements OnInit {
 
+    private projects: {}[];
+
     constructor(private projService: Project) {}
 
     ngOnInit() {
+        this.projService.getJSON().subscribe(data => {
+            this.projects = JSON.parse(data._body);
+        })
     }
 
     closeProjects() {
