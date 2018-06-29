@@ -1,0 +1,31 @@
+<ng-template #pageTemplate>
+    <div class="page about">
+
+        <div>
+            <app-blueify [blueifyType]="'h1'"
+                [content]="'Who am I?'"></app-blueify>
+        </div>
+
+        <app-buttons [text]="'resume'"
+            [toDo]="displayPDF"
+            [value]="true"></app-buttons>
+        <app-buttons [text]="'contact'"
+            [toDo]="setPage"
+            [value]="3"></app-buttons>
+
+        <div class="description">
+            <img class="image" 
+                 src="assets\images\meMyselfAndI.jpg">
+            <br>
+            <app-blueify [blueifyType]="'p'"
+                [content]="'Over the past 5 years, I have taught myself to code. With the past year primarily focused on web technologies. If there\'s one thing I have learned throughout this process, is that there is always more to learn. Eager to further expand my knowledge, I sought after mentorship. And landed an internship under the guidance of Denis Bajet at hospitalityPulse. Now, with my new found knowledge; I\'m looking to join a team, where I can further hone my skills and build kick-ass tech.'"></app-blueify>
+        </div>
+
+    </div>
+
+    <app-pdf-viewer></app-pdf-viewer>
+</ng-template>
+
+<app-page [pageIndex]="1"
+    [pageTemplate]="pageTemplate">    
+</app-page>
