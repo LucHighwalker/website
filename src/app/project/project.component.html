@@ -24,6 +24,16 @@
             [content]="project.description"></app-blueify>
     </div>
 
+    <div class="frameworks" *ngIf="project.frameworks !== undefined">
+        <app-blueify [blueifyType]="'p'"
+            [content]="'frameworks: ' + project.frameworks"></app-blueify>
+    </div>
+
+    <div class="backend" *ngIf="project.backend !== undefined">
+        <app-blueify [blueifyType]="'p'"
+            [content]="'backend: ' + project.backend"></app-blueify>
+    </div>
+
     <a class="link"
        href="{{link.link}}" target="_blank"
        *ngFor="let link of project.links">
