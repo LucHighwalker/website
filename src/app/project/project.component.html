@@ -24,12 +24,12 @@
             [content]="project.description"></app-blueify>
     </div>
 
-    <div class="frameworks" *ngIf="project.frameworks !== undefined">
+    <div class="frameworks-backend" *ngIf="project.frameworks !== undefined">
         <app-blueify [blueifyType]="'p'"
             [content]="'frameworks: ' + project.frameworks"></app-blueify>
     </div>
 
-    <div class="backend" *ngIf="project.backend !== undefined">
+    <div class="frameworks-backend" *ngIf="project.backend !== undefined">
         <app-blueify [blueifyType]="'p'"
             [content]="'backend: ' + project.backend"></app-blueify>
     </div>

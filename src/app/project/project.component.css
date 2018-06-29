@@ -42,6 +42,12 @@
 
 .description {
     margin: 25px 50px;
+    text-align: left;
+}
+
+.frameworks-backend {
+    margin: 0 50px;
+    text-align: left;
 }
 
 .link {
