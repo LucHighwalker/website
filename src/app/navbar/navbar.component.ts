@@ -85,31 +85,31 @@ import {
       state(
         '0',
         style({
-          transform: 'translateX(1px)'
+          transform: 'translateX(0px)'
         })
       ),
       state(
         '1',
         style({
-          transform: 'translateX(103px)'
+          transform: 'translateX(99px)'
         })
       ),
       state(
         '2',
         style({
-          transform: 'translateX(207px)'
+          transform: 'translateX(199px)'
         })
       ),
       state(
         '3',
         style({
-          transform: 'translateX(314px)'
+          transform: 'translateX(299px)'
         })
       ),
       state(
         '4',
         style({
-          transform: 'translateX(-414px)'
+          transform: 'translateX(-420px)'
         })
       ),
       transition('* => *', animate('0.35s ease'))

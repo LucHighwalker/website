@@ -2,10 +2,10 @@
     position: fixed;
     z-index: 100;
     top: 0;
-    right: 12px;
+    left: 12px;
     margin-right: 25px;
     color: #cccccc;
-    opacity: 0.25;
+    opacity: 0.5;
     font-size: x-small;
     text-shadow: 1px 1px #393939;
     pointer-events: none;
