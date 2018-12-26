@@ -1,41 +1,40 @@
-<div class="indicator"
-     [@enterIndicator]="activePage"
-     [@shiftIndicator]="activePage">
-     <div class="background"></div>
+<div
+  class="indicator"
+  [@enterIndicator]="activePage"
+  [@shiftIndicator]="activePage"
+>
+  <div class="background"></div>
 </div>
 
-<div class="main_navbar"
-     [@enterNav]=true>
-
-     <div class="navigation">
-
-        <div class="navigation_button"
-             (mouseenter) ="mouseEnter(0)"
-             (mouseleave) ="mouseLeave(0)"
-             (click)="setPage(0)"
-             [@mouseOver]="getMouseOver(0) && activePage !== 0">
-            <span >home</span>
-        </div>
-        <div class="navigation_button"
-             (mouseenter) ="mouseEnter(1)"
-             (mouseleave) ="mouseLeave(1)"
-             (click)="setPage(1)"
-             [@mouseOver]="getMouseOver(1) && activePage !== 1">
-            <span>about</span>
-        </div>
-        <div class="navigation_button"
-             (mouseenter) ="mouseEnter(2)"
-             (mouseleave) ="mouseLeave(2)"
-             (click)="setPage(2)"
-             [@mouseOver]="getMouseOver(2) && activePage !== 2">
-            <span>projects</span>
-        </div>
-        <div class="navigation_button"
-             (mouseenter) ="mouseEnter(3)"
-             (mouseleave) ="mouseLeave(3)"
-             (click)="setPage(3)"
-             [@mouseOver]="getMouseOver(3) && activePage !== 3">
-            <span>contact</span>
-        </div>
+<div class="main_navbar" [@enterNav]="true">
+  <div class="navigation">
+    <div
+      class="navigation_button"
+      [ngClass]="{ selected: activePage === 0 }"
+      (click)="setPage(0)"
+    >
+      <span>home</span>
     </div>
+    <div
+      class="navigation_button"
+      [ngClass]="{ selected: activePage === 1 }"
+      (click)="setPage(1)"
+    >
+      <span>about</span>
+    </div>
+    <div
+      class="navigation_button"
+      [ngClass]="{ selected: activePage === 2 }"
+      (click)="setPage(2)"
+    >
+      <span>projects</span>
+    </div>
+    <div
+      class="navigation_button"
+      [ngClass]="{ selected: activePage === 3 }"
+      (click)="setPage(3)"
+    >
+      <span>contact</span>
+    </div>
+  </div>
 </div>

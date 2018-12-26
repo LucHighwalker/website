@@ -35,7 +35,7 @@ import {
     trigger('enterNav', [
       transition('void => *', [
         animate(
-          '0.75s 0.99s ease-in',
+          '0.99s ease-in',
           keyframes([
             style({ opacity: 0, transform: 'translateY(-100px)', offset: 0 }),
             style({
@@ -47,25 +47,6 @@ import {
           ])
         )
       ])
-    ]),
-
-    trigger('mouseOver', [
-      state(
-        '0',
-        style({
-          color: 'white',
-          transform: 'scale(1, 1)'
-        })
-      ),
-      state(
-        '1',
-        style({
-          color: '#239dee',
-          transform: 'scale(1.25, 1.25)'
-        })
-      ),
-      transition('0 => 1', animate('0.75s ease')),
-      transition('1 => 0', animate('1.25s ease'))
     ]),
 
     trigger('enterIndicator', [
@@ -130,17 +111,5 @@ export class NavbarComponent implements OnInit {
     if (this.activePage !== page) {
       this.globalData.setActivePage(page);
     }
-  }
-
-  mouseEnter(index: number) {
-    this.mouseOver[index] = true;
-  }
-
-  mouseLeave(index: number) {
-    this.mouseOver[index] = false;
-  }
-
-  getMouseOver(index: number) {
-    return this.mouseOver[index];
   }
 }
