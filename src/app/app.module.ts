@@ -49,7 +49,6 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
         HttpModule,
         RouterModule.forRoot([
             { path: '', component: HomePageComponent },
-            { path: 'home', component: HomePageComponent },
             { path: 'about', component: AboutPageComponent },
             { path: 'projects', component: ProjectsPageComponent },
             { path: 'contact', component: ContactPageComponent },

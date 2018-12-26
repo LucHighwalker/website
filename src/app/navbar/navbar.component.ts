@@ -35,7 +35,7 @@ import {
     trigger('enterNav', [
       transition('void => *', [
         animate(
-          '0.99s ease-in',
+          '1s ease-in',
           keyframes([
             style({ opacity: 0, transform: 'translateY(-100px)', offset: 0 }),
             style({
