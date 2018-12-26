@@ -91,25 +91,25 @@ import {
       state(
         '1',
         style({
-          transform: 'translateX(106px)'
+          transform: 'translateX(103px)'
         })
       ),
       state(
         '2',
         style({
-          transform: 'translateX(211px)'
+          transform: 'translateX(207px)'
         })
       ),
       state(
         '3',
         style({
-          transform: 'translateX(316px)'
+          transform: 'translateX(314px)'
         })
       ),
       state(
         '4',
         style({
-          transform: 'translateX(-420px)'
+          transform: 'translateX(-414px)'
         })
       ),
       transition('* => *', animate('0.35s ease'))
