@@ -45,6 +45,24 @@ textarea {
     text-align: left;
 }
 
+a {
+  color: white;
+  transform: scale(1.1, 1.1);
+  line-height: 1.8;
+  margin: 0 3px;
+  text-decoration: none;
+  word-wrap: normal;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+a:hover {
+  color: #239dee;
+  transform: scale(1.1, 1.1);
+  transition: all 0.75s !important;
+}
+
 .inline_display {
     display: inline-block;
 }

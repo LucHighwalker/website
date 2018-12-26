@@ -52,15 +52,10 @@
 }
 
 .link {
-    min-width: 75px;
-    color: #239dee;
-    text-shadow: none;
-    margin: 25px;
-    display: inline-block;
-}
-
-.link:hover {
-    color: darkgrey;
+  min-width: 75px;
+  text-shadow: none;
+  margin: 25px;
+  display: inline-block;
 }
 
 .dropdown {

@@ -1,35 +1,35 @@
 <ng-template #h1Template>
-    <h1 *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverH1]="getMouseOver(i)">{{string}}</h1>
+    <h1 *ngFor="let string of contentArray">{{string}}</h1>
 </ng-template>
 
 <ng-template #h2Template>
-    <h2 *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverH2]="getMouseOver(i)">{{string}}</h2>
+    <h2 *ngFor="let string of contentArray">{{string}}</h2>
 </ng-template>
-    
+
 <ng-template #h3Template>
-    <h3 *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverH3]="getMouseOver(i)">{{string}}</h3>
+    <h3 *ngFor="let string of contentArray">{{string}}</h3>
 </ng-template>
 
 <ng-template #spanTemplate>
-    <span *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverSpan]="getMouseOver(i)">{{string}}</span>
+    <span *ngFor="let string of contentArray">{{string}}&nbsp;</span>
 </ng-template>
 
 <ng-template #pTemplate>
-    <p *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverP]="getMouseOver(i)">{{string}}</p>
+    <p *ngFor="let string of contentArray">{{string}}&nbsp;</p>
 </ng-template>
 
 <ng-template #phoneTemplate>
-    <a *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverSpan]="getMouseOver(i)"
-        href="tel:8312003298">{{string}}</a>
+    <a *ngFor="let string of contentArray"
+        href="tel:8312003298">{{string}}&nbsp;</a>
 </ng-template>
 
 <ng-template #emailTemplate>
-    <a *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverSpan]="getMouseOver(i)"
+    <a *ngFor="let string of contentArray"
         href="mailto:email@luc.gg">{{string}}</a>
 </ng-template>
 
 <ng-template #linkedTemplate>
-    <a *ngFor="let string of contentArray; index as i;" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseLeave(i)" [@mouseOverSpan]="getMouseOver(i)"
+    <a *ngFor="let string of contentArray"
         href="https://www.linkedin.com/in/lucgeegee" target="_blank">{{string}}</a>
 </ng-template>
 

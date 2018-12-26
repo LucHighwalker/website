@@ -1,45 +1,81 @@
 h1 {
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: default;
+  color: white;
+  transform: scale(1, 1);
+  margin: 0 5px;
+  cursor: default;
+  transition: all 1s;
+}
+
+h1:hover {
+  color: #239dee;
+  transform: scale(1.5, 1.5);
+  margin: 0 20px;
+  transition: all 0.75s !important;
 }
 
 h2 {
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: default;
+  color: white;
+  transform: scale(1, 1);
+  margin: 0 5px;
+  cursor: default;
+  transition: all 1s;
+}
+
+h2:hover {
+  color: #239dee;
+  transform: scale(1.25, 1.25);
+  margin: 0 10px;
+  transition: all 0.75s !important;
 }
 
 h3 {
-    line-height: 1.8;
-    margin-left: 3px;
-    margin-right: 3px;
-    word-wrap: normal;
-    display: inline-block;
-    cursor: default;
+  color: white;
+  transform: scale(1, 1);
+  line-height: 1.8;
+  margin: 0 3px;
+  word-wrap: normal;
+  display: inline-block;
+  cursor: default;
+  transition: all 1s;
+}
+
+h3:hover {
+  color: #239dee;
+  transform: scale(1.1, 1.1);
+  margin: 0 5px;
+  transition: all 0.75s !important;
 }
 
 span {
-    line-height: 1.8;
-    margin: 0 3px;
-    word-wrap: normal;
-    display: inline-block;
-    cursor: default;
+  color: white;
+  transform: scale(1, 1);
+  line-height: 1.8;
+  margin: 0;
+  word-wrap: normal;
+  display: inline-block;
+  cursor: default;
+  transition: all 1s;
+}
+
+span:hover {
+  color: #239dee;
+  transform: scale(1.1, 1.1);
+  transition: all 0.25s !important;
 }
 
 p {
-    line-height: 1.8;
-    margin: 0 3px;
-    word-wrap: normal;
-    display: inline-block;
-    cursor: default;
+  color: white;
+  transform: scale(1, 1);
+  line-height: 1.8;
+  margin: 0;
+  word-wrap: normal;
+  display: inline-block;
+  cursor: default;
+  transition: all 1s;
 }
 
-a {
-    line-height: 1.8;
-    margin: 0 3px;
-    text-decoration: none;
-    word-wrap: normal;
-    display: inline-block;
-    cursor: pointer;
+p:hover {
+  color: #239dee;
+  transform: scale(1.05, 1.05);
+  transition: all 0.25s !important;
 }
