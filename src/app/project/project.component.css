@@ -12,6 +12,7 @@
     box-shadow: 0 0 10px 1px #393939;
     border-collapse: collapse;
     cursor: pointer;
+    transition: all 1s;
 }
 
 .title:hover {
@@ -64,10 +65,10 @@
 
 .dropdown {
     position: relative;
-    z-index: 400;
+    z-index: 600;
     top: -2px;
     width: 75%;
-    margin: 0 auto;
+    margin: 5px auto;
     min-width: 400px;
     margin-bottom: 25px;
     border-style: solid;

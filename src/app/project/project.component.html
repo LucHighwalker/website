@@ -1,51 +1,56 @@
-<div class="title"
-     (mouseenter)="mouseEnter()"
-     (mouseleave)="mouseLeave()"
-     (click)="expand()"
-     [@mouseOver]="mouseOver">
+<div
+  class="title"
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()"
+  (click)="expand()"
+  [@mouseOver]="mouseOver || expanded"
+>
+  <div class="background"></div>
 
-     <div class="background"></div>
+  <img class="title_image" [hidden]="hideTitleImg" [src]="project.image" />
 
-    <img class="title_image"
-         [hidden]="hideTitleImg"
-         [src]="project.image">
-
-    <h3 class="title_title" (click)="expand()">{{project.title}}</h3>
-
+  <h3 class="title_title" (click)="expand()">{{ project.title }}</h3>
 </div>
 
-<div class="dropdown"
-     [@expand]="expanded">
+<div class="dropdown" [@expand]="expanded">
+  <div class="background"></div>
 
-     <div class="background"></div>
+  <div class="description">
+    <app-blueify
+      [blueifyType]="'p'"
+      [content]="project.description"
+    ></app-blueify>
+  </div>
 
-    <div class="description">
-        <app-blueify [blueifyType]="'p'"
-            [content]="project.description"></app-blueify>
+  <div class="frameworks-backend" *ngIf="project.frameworks !== undefined">
+    <app-blueify
+      [blueifyType]="'p'"
+      [content]="'frameworks: ' + project.frameworks"
+    ></app-blueify>
+  </div>
+
+  <div class="frameworks-backend" *ngIf="project.backend !== undefined">
+    <app-blueify
+      [blueifyType]="'p'"
+      [content]="'backend: ' + project.backend"
+    ></app-blueify>
+  </div>
+
+  <a
+    class="link"
+    href="{{ link.link }}"
+    target="_blank"
+    *ngFor="let link of project.links"
+  >
+    <div>
+      <i class="material-icons">{{ link.icon }}</i>
     </div>
 
-    <div class="frameworks-backend" *ngIf="project.frameworks !== undefined">
-        <app-blueify [blueifyType]="'p'"
-            [content]="'frameworks: ' + project.frameworks"></app-blueify>
-    </div>
+    <span>{{ link.name }}</span>
+  </a>
 
-    <div class="frameworks-backend" *ngIf="project.backend !== undefined">
-        <app-blueify [blueifyType]="'p'"
-            [content]="'backend: ' + project.backend"></app-blueify>
-    </div>
-
-    <a class="link"
-       href="{{link.link}}" target="_blank"
-       *ngFor="let link of project.links">
-
-       <div>
-            <i class="material-icons">{{link.icon}}</i>
-        </div>
-
-        <span>{{link.name}}</span>
-    </a>
-
-    <app-gallery-preview [title]="project.title"
-        [images]="project.gallery"></app-gallery-preview>
-
+  <app-gallery-preview
+    [title]="project.title"
+    [images]="project.gallery"
+  ></app-gallery-preview>
 </div>
