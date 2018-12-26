@@ -1,4 +1,6 @@
 .button {
+    color: white;
+    transform: scale(1, 1);
     display: inline-block;
     height: 25px;
     width: 100px;
@@ -13,4 +15,13 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    transition: all 1.25s;
+    cursor: pointer;
+}
+
+.button:hover {
+  color: #239dee;
+  border-color: #239dee;
+  transform: scale(1.25, 1.25);
+  transition: all 0.75s;
 }

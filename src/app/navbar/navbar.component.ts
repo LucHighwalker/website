@@ -99,7 +99,6 @@ import {
 })
 export class NavbarComponent implements OnInit {
   activePage = 0;
-  mouseOver: boolean[] = [false, false, false, false];
 
   constructor(private globalData: GlobalData) {}
 
