@@ -10,7 +10,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-blueify',
+  selector: 'luc-blueify',
   templateUrl: './blueify.component.html',
   styleUrls: ['./blueify.component.css'],
   animations: [

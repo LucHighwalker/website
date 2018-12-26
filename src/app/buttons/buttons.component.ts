@@ -11,7 +11,7 @@ import {
 import { GlobalData } from '../shared/globalData.service';
 
 @Component({
-  selector: 'app-buttons',
+  selector: 'luc-buttons',
   templateUrl: './buttons.component.html',
   styleUrls: ['./buttons.component.css'],
   animations: [

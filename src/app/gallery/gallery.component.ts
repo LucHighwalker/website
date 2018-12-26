@@ -5,7 +5,7 @@ import {Gallery} from "./gallery.service";
 import {GlobalData} from "../shared/globalData.service";
 
 @Component({
-    selector: 'app-gallery',
+    selector: 'luc-gallery',
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.css'],
     animations: [

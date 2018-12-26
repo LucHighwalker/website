@@ -11,7 +11,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'luc-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   animations: [

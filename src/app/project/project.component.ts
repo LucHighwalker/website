@@ -13,7 +13,7 @@ import { Project } from './project.service';
 import { GlobalData } from '../shared/globalData.service';
 
 @Component({
-  selector: 'app-project',
+  selector: 'luc-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
   animations: [

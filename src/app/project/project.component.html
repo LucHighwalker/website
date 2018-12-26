@@ -16,24 +16,24 @@
   <div class="background"></div>
 
   <div class="description">
-    <app-blueify
+    <luc-blueify
       [blueifyType]="'p'"
       [content]="project.description"
-    ></app-blueify>
+    ></luc-blueify>
   </div>
 
   <div class="frameworks-backend" *ngIf="project.frameworks !== undefined">
-    <app-blueify
+    <luc-blueify
       [blueifyType]="'p'"
       [content]="'frameworks: ' + project.frameworks"
-    ></app-blueify>
+    ></luc-blueify>
   </div>
 
   <div class="frameworks-backend" *ngIf="project.backend !== undefined">
-    <app-blueify
+    <luc-blueify
       [blueifyType]="'p'"
       [content]="'backend: ' + project.backend"
-    ></app-blueify>
+    ></luc-blueify>
   </div>
 
   <a
@@ -49,8 +49,8 @@
     <span>{{ link.name }}</span>
   </a>
 
-  <app-gallery-preview
+  <luc-gallery-preview
     [title]="project.title"
     [images]="project.gallery"
-  ></app-gallery-preview>
+  ></luc-gallery-preview>
 </div>

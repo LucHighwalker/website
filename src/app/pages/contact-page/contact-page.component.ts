@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contact-page',
+  selector: 'luc-contact-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.css']
 })

@@ -1,16 +1,13 @@
 <ng-template #pageTemplate>
-    <div class="page not_found">
-    <app-blueify [blueifyType]="'h1'"
-        [content]="'404'"></app-blueify>
-    <br>
-    <img class="image" 
-         src="assets\images\hand.gif">
-    <br>
-    <app-blueify [blueifyType]="'h1'"
-        [content]="'Page not Found'"></app-blueify>
-</div>
+  <div class="page not_found">
+    <luc-blueify [blueifyType]="'h1'" [content]="'404'"></luc-blueify>
+    <br />
+    <img class="image" src="assets\images\hand.gif" /> <br />
+    <luc-blueify
+      [blueifyType]="'h1'"
+      [content]="'Page not Found'"
+    ></luc-blueify>
+  </div>
 </ng-template>
 
-<app-page [pageIndex]="4"
-    [pageTemplate]="pageTemplate">    
-</app-page>
+<luc-page [pageIndex]="4" [pageTemplate]="pageTemplate"> </luc-page>

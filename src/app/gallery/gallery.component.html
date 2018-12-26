@@ -12,13 +12,13 @@
     <div class="gallery_view">
 
         <div>
-<!--            <app-blueify [blueifyType]="'h1'"
-                [content]="title"></app-blueify>
+<!--            <luc-blueify [blueifyType]="'h1'"
+                [content]="title"></luc-blueify>
             <h1>{{title}}</h1> <h1 class="blue">&nbsp;gallery</h1>-->
         </div>
 
         <div class="gallery_image">
-            <img class="image" 
+            <img class="image"
                  [src]="displayImg('current')">
             <div class="image_controls">
                 <div class="image_barBG"></div>
@@ -52,7 +52,7 @@
             <div class="gallery_thumbnail"
                  [ngClass]="{'selected': isSelected(img)}"
                  *ngFor="let img of images">
-                 <img class="thumbnail" 
+                 <img class="thumbnail"
                  [src]="img"
                  (click)="selectImg(img)">
             </div>

@@ -1,16 +1,18 @@
 <ng-template #pageTemplate>
-    <div class="page projects">
-        <div class="projects_title">
-            <app-blueify [blueifyType]="'h1'" [content]="'Projects'"></app-blueify>
-        </div>
-
-        <div class="projectBackdrop" (click)="closeProjects()"></div>
-
-        <app-project *ngFor="let project of projects; index as i;" [project]="projects[i]"></app-project>
+  <div class="page projects">
+    <div class="projects_title">
+      <luc-blueify [blueifyType]="'h1'" [content]="'Projects'"></luc-blueify>
     </div>
 
-    <app-gallery></app-gallery>
+    <div class="projectBackdrop" (click)="closeProjects()"></div>
+
+    <luc-project
+      *ngFor="let project of projects; index as i"
+      [project]="projects[i]"
+    ></luc-project>
+  </div>
+
+  <luc-gallery></luc-gallery>
 </ng-template>
 
-<app-page [pageIndex]="2" [pageTemplate]="pageTemplate">
-</app-page>
+<luc-page [pageIndex]="2" [pageTemplate]="pageTemplate"> </luc-page>

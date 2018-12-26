@@ -10,7 +10,7 @@ import {
 import { GlobalData } from '../shared/globalData.service';
 
 @Component({
-  selector: 'app-background',
+  selector: 'luc-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
   animations: [
@@ -77,7 +77,7 @@ export class BackgroundComponent implements OnInit {
     this.globalData.pageChange.subscribe(page => (this.activePage = page));
 
     this.image.src = 'assets/images/mountains.jpg';
-    let component = this;
+    const component = this;
     this.image.onload = function() {
       component.bgLoaded = true;
     };

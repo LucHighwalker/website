@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 import {GlobalData} from '../shared/globalData.service';
 
 @Component({
-    selector: 'app-page',
+    selector: 'luc-page',
     templateUrl: './page.component.html',
     styleUrls: ['./page.component.css'],
     animations: [
@@ -24,7 +24,7 @@ export class PageComponent implements OnInit {
 
     @Input()
     pageIndex: number;
-    
+
     @Input()
     pageTemplate: TemplateRef<any>;
 
