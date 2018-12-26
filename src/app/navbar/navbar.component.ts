@@ -18,14 +18,9 @@ import {
     trigger('enterBG', [
       transition('void => *', [
         animate(
-          '0.5s ease-in',
+          '1.25s ease-in',
           keyframes([
-            style({ opacity: 0, transform: 'translateY(-100px)', offset: 0 }),
-            style({
-              opacity: 0.75,
-              transform: 'translateY(10px)',
-              offset: 0.75
-            }),
+            style({ opacity: 0, transform: 'translateY(100px)', offset: 0 }),
             style({ opacity: 1, transform: 'translateY(0)', offset: 1 })
           ])
         )

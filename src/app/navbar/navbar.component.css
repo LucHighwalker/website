@@ -4,10 +4,10 @@
 
 .navbar_background {
     position: fixed;
-    bottom: -20px;
-    left: -20%;
-    z-index: -420;
-    height: 140px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    height: 75px;
     width: 140%;
     pointer-events: none;
     user-select: none;
@@ -15,6 +15,11 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    /* http://www.colorzilla.com/gradient-editor/ */
+    background: -moz-linear-gradient(top, #00000000 0%, #000000c5 100%);
+    background: -webkit-linear-gradient(top, #00000000 0%,#000000c5 100%);
+    background: linear-gradient(to bottom, #00000000 0%,#000000c5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 
 .indicator {
@@ -32,7 +37,7 @@
 .main_navbar {
     position: fixed;
     bottom: 0px;
-    left: 1px;
+    left: 0px;
     z-index: 1200;
     height: 50px;
     width: 100%;
@@ -52,7 +57,7 @@
 .navigation_button {
     color: #239dee;
     position: relative;
-    top: 12px;
+    top: 13px;
     display: inline-block;
     text-align: center;
     height: 50px;
@@ -60,7 +65,6 @@
     pointer-events: auto;
     outline: none;
     transform: scale(1, 1);
-    opacity: 0.75;
     cursor: pointer;
     transition: all 1s;
 }
@@ -68,12 +72,10 @@
 .navigation_button:hover {
   color: white;
   transform: scale(1.25, 1.25);
-  opacity: 1;
 }
 
 .navigation_button.selected {
   color: white;
   transform: scale(1, 1);
-  opacity: 1;
   cursor: default;
 }
