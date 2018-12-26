@@ -1,10 +1,27 @@
 [
     {
+        "title": "Regeng",
+        "image": "assets/images/Ruby.png",
+        "description": "A simple ruby gem which translates plain english into regular expressions.",
+        "links": [
+            {
+                "name": "Ruby Gem",
+                "icon": "sentiment_satisfied_alt",
+                "link": "https://rubygems.org/gems/regeng"
+            },
+            {
+                "name": "Source",
+                "icon": "code",
+                "link": "https://github.com/LucHighwalker/regeng"
+            }
+        ]
+    },
+    {
         "title": "WTFood.menu",
         "image": "assets/images/WTFoodLogoSmall.png",
-        "description": "After numerous frustrations finding poorly maintained PDFs for online restaurant menus, WTFood was born. Aiming to provide restaurants with an easy and inexpensive method of managing online menus in realtime.",
+        "description": "After numerous frustrations finding poorly maintained PDFs for online restaurant menus, WTFood was born. Aiming to provide restaurants with an easy and inexpensive method of managing online menus in realtime. I am currently refactoring this application to use a node backend rather than firebase, along with many other improvements.",
         "frameworks": "Angular",
-        "backend": "Firebase",
+        "backend": "Firebase (node rework in progress)",
         "links": [
             {
                 "name": "WTFood.menu",
@@ -21,21 +38,12 @@
     {
         "title": "pulseDocs",
         "image": "assets/images/pulseDocs/hospitalityPulse.png",
-        "description": "An application I made during my internship at hospitalityPulse. It displays their api in swagger style, and allows for editing when logged in.",
+        "description": "An application I made during my internship at hospitalityPulse. It displayed their api in swagger style, and allows for editing when logged in. Unfortunately the company shut down so links are not available. :(",
         "frameworks": "AngularJS",
         "backend": "PHP MYSQL",
         "gallery": [
-            "https://docs.hospitalitypulse.net/images/pulseDocsLogo.png",
-            "https://docs.hospitalitypulse.net/images/pulseDocsHelp.jpeg",
             "assets/images/pulseDocs/pulseDocsSearch.jpg",
             "assets/images/pulseDocs/pulseDocsLogin.jpg"
-        ],
-        "links": [
-            {
-                "name": "pulseDocs",
-                "icon": "link",
-                "link": "https://docs.hospitalitypulse.net/#/"
-            }
         ]
     },
     {
