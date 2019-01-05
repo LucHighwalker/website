@@ -10,6 +10,11 @@
                 "link": "https://rubygems.org/gems/regeng"
             },
             {
+                "name": "Documentation",
+                "icon": "chrome_reader_mode",
+                "link": "https://luchighwalker.github.io/regeng/#/"
+            },
+            {
                 "name": "Source",
                 "icon": "code",
                 "link": "https://github.com/LucHighwalker/regeng"
