@@ -1,0 +1,38 @@
+.frame {
+  transform: scale(1, 1);
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 30%;
+  min-width: 200px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  box-shadow: 0 0 10px 1px #393939;
+  overflow: hidden;
+  background-image: url('/assets/images/jedi.jpg');
+  background-size: cover;
+
+  .image {
+    transform: scale(1.2, 1.2);
+    width: 100%;
+    height: auto;
+    opacity: 0;
+  }
+}
+
+
+.frame:hover {
+  transform: scale(1.05, 1.05);
+  border-color: #239dee;
+
+  .image {
+    transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+}

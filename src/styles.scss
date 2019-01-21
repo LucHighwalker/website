@@ -54,13 +54,17 @@ a {
   word-wrap: normal;
   display: inline-block;
   cursor: pointer;
-  transition: all 1s;
+  transition: all 1s ease;
 }
 
 a:hover {
   color: #239dee;
   transform: scale(1.1, 1.1);
-  transition: all 0.75s !important;
+  transition: all 0.75s ease !important;
+}
+
+.animate {
+  transition: all 1s ease !important;
 }
 
 .inline_display {
