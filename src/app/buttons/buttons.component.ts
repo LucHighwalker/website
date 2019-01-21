@@ -13,7 +13,7 @@ import { GlobalData } from '../shared/globalData.service';
 @Component({
   selector: 'luc-buttons',
   templateUrl: './buttons.component.html',
-  styleUrls: ['./buttons.component.css'],
+  styleUrls: ['./buttons.component.scss'],
 })
 export class ButtonsComponent implements OnInit {
   @Input()

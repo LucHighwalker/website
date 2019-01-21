@@ -23,6 +23,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { PictureComponent } from './picture/picture.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
         AboutPageComponent,
         ProjectsPageComponent,
         ContactPageComponent,
-        NotFoundPageComponent
+        NotFoundPageComponent,
+        PictureComponent
     ],
     imports: [
         BrowserModule,

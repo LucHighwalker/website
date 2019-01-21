@@ -12,7 +12,7 @@ import {
 @Component({
   selector: 'luc-blueify',
   templateUrl: './blueify.component.html',
-  styleUrls: ['./blueify.component.css']
+  styleUrls: ['./blueify.component.scss']
 })
 export class BlueifyComponent implements OnInit {
   @Input()

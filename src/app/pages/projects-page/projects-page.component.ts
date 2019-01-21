@@ -4,7 +4,7 @@ import { Project } from '../../project/project.service';
 @Component({
   selector: 'luc-projects-page',
   templateUrl: './projects-page.component.html',
-  styleUrls: ['./projects-page.component.css']
+  styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent implements OnInit {
   public projects: {}[];

@@ -4,7 +4,7 @@ import { Gallery } from '../gallery/gallery.service';
 @Component({
   selector: 'luc-gallery-preview',
   templateUrl: './gallery-preview.component.html',
-  styleUrls: ['./gallery-preview.component.css']
+  styleUrls: ['./gallery-preview.component.scss']
 })
 export class GalleryPreviewComponent implements OnInit {
   @Input()

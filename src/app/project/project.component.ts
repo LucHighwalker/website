@@ -15,7 +15,7 @@ import { GlobalData } from '../shared/globalData.service';
 @Component({
   selector: 'luc-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css'],
+  styleUrls: ['./project.component.scss'],
   animations: [
     trigger('mouseOver', [
       state(

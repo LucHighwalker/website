@@ -12,7 +12,7 @@ import { GlobalData } from '../shared/globalData.service';
 @Component({
   selector: 'luc-background',
   templateUrl: './background.component.html',
-  styleUrls: ['./background.component.css'],
+  styleUrls: ['./background.component.scss'],
   animations: [
     trigger('enterBG', [
       state(

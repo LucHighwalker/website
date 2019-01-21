@@ -13,7 +13,7 @@ import { GlobalData } from '../shared/globalData.service';
 @Component({
   selector: 'luc-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css'],
+  styleUrls: ['./gallery.component.scss'],
   animations: [
     trigger('enterGalleryBG', [
       state(

@@ -13,7 +13,7 @@ import {
 @Component({
   selector: 'luc-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  styleUrls: ['./navbar.component.scss'],
   animations: [
     trigger('enterBG', [
       transition('void => *', [

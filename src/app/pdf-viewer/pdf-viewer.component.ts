@@ -12,7 +12,7 @@ import { GlobalData } from '../shared/globalData.service';
 @Component({
   selector: 'luc-pdf-viewer',
   templateUrl: './pdf-viewer.component.html',
-  styleUrls: ['./pdf-viewer.component.css'],
+  styleUrls: ['./pdf-viewer.component.scss'],
   animations: [
     trigger('enterPDFBG', [
       state(

@@ -7,7 +7,7 @@ import {GlobalData} from '../shared/globalData.service';
 @Component({
     selector: 'luc-page',
     templateUrl: './page.component.html',
-    styleUrls: ['./page.component.css'],
+    styleUrls: ['./page.component.scss'],
     animations: [
 
         trigger('enterPage', [
