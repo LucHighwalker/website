@@ -1,10 +1,50 @@
-[
+[{
+    "title": "Partum React",
+    "image": "assets/images/react.png",
+    "description": "An angular-esque cli for react.",
+    "links": [{
+        "name": "Partum React(npm)",
+        "icon": "extension",
+        "link": "https://www.npmjs.com/package/partum-react"
+      },
+      {
+        "name": "Documentation",
+        "icon": "chrome_reader_mode",
+        "link": "https://luchighwalker.github.io/partum-react/#/"
+      },
+      {
+        "name": "Source",
+        "icon": "code",
+        "link": "https://github.com/LucHighwalker/partum-react"
+      },
+      {
+        "name": "Medium Article",
+        "icon": "format_align_left",
+        "link": "https://medium.com/@luc.highwalker/reacts-major-downside-over-angular-5edd32c7fb42"
+      }
+    ]
+  },
+  {
+    "title": "Ts Node Starter",
+    "image": "assets/images/tslogo.png",
+    "description": "A typescript node starter with authentication and email verification.",
+    "links": [{
+        "name": "Source",
+        "icon": "code",
+        "link": "https://github.com/LucHighwalker/ts-node-starter"
+      },
+      {
+        "name": "CLI Tool(npm)",
+        "icon": "computer",
+        "link": "https://www.npmjs.com/package/ts-node-cli"
+      }
+    ]
+  },
   {
     "title": "Regeng",
     "image": "assets/images/Ruby.png",
     "description": "A simple ruby gem which translates plain english into regular expressions.",
-    "links": [
-      {
+    "links": [{
         "name": "Ruby Gem",
         "icon": "sentiment_satisfied_alt",
         "link": "https://rubygems.org/gems/regeng"
@@ -27,25 +67,21 @@
     "description": "After numerous frustrations finding poorly maintained PDFs for online restaurant menus, WTFood was born. Aiming to provide restaurants with an easy and inexpensive method of managing online menus in realtime. I am currently refactoring this application to use a node backend rather than firebase, along with many other improvements.",
     "frameworks": "Angular",
     "backend": "Firebase (node rework in progress)",
-    "links": [
-      {
-        "name": "WTFood.menu",
-        "icon": "fastfood",
-        "link": "https://wtfood.menu/"
-      }
-    ]
+    "links": [{
+      "name": "WTFood.menu",
+      "icon": "fastfood",
+      "link": "https://wtfood.menu/"
+    }]
   },
   {
     "title": "luc.gg",
     "description": "Designed to work well on mobile or desktop, without changing the looks of the site. This site works as my resume.",
     "frameworks": "Angular",
-    "links": [
-      {
-        "name": "Source",
-        "icon": "code",
-        "link": "https://github.com/LucHighwalker/website"
-      }
-    ]
+    "links": [{
+      "name": "Source",
+      "icon": "code",
+      "link": "https://github.com/LucHighwalker/website"
+    }]
   },
   {
     "title": "pulseDocs",
@@ -64,15 +100,23 @@
     "description": "A collection of assets created during the Reefer Madness refactor.",
     "frameworks": "Unity3D",
     "gallery": [
-      "https://d2ujflorbtfzji.cloudfront.net/package-screenshot/f15f941f-8fde-4930-aaa5-6b7d5dbdda2a_scaled.jpg",
-      "https://d2ujflorbtfzji.cloudfront.net/key-image/3692d5e8-a4a5-4674-ae98-6c1b88258b37.jpg",
-      "https://d2ujflorbtfzji.cloudfront.net/key-image/d296d7dc-bf23-42c5-91c5-10da1e7e50a8.jpg"
+      "https://assetstorev1-prd-cdn.unity3d.com/key-image/3692d5e8-a4a5-4674-ae98-6c1b88258b37.jpg",
+      "https://assetstorev1-prd-cdn.unity3d.com/key-image/d296d7dc-bf23-42c5-91c5-10da1e7e50a8.jpg"
     ],
-    "links": [
-      {
+    "links": [{
         "name": "Asset Store",
         "icon": "shopping_cart",
         "link": "https://assetstore.unity.com/publishers/21002"
+      },
+      {
+        "name": "2DDN Demo(YouTube)",
+        "icon": "movie",
+        "link": "https://youtu.be/S-WpoqQEVVA"
+      },
+      {
+        "name": "Infinite Forest Demo(YouTube)",
+        "icon": "movie",
+        "link": "https://youtu.be/m6Djdhp1s-U"
       }
     ]
   },
@@ -80,13 +124,11 @@
     "title": "Reefer Madness v2.0",
     "description": "A complete rewrite of Reefer Madness, utilizing a lot of what I learned during Reefer Madness 1.0. Everything is compartmentalized, mostly being able to disable or remove parts of the game without breaking the game. This was also done to publish the assets created on the Unity Asset Store. Looking at it now, after my internship, I just want to rewrite the whole thing again.",
     "frameworks": "Unity3D",
-    "links": [
-      {
-        "name": "GoogleDrive",
-        "icon": "cloud",
-        "link": "https://www.google.com"
-      }
-    ]
+    "links": [{
+      "name": "GoogleDrive",
+      "icon": "cloud",
+      "link": "https://www.google.com"
+    }]
   },
   {
     "title": "Reefer Madness",
@@ -104,8 +146,7 @@
       "https://lh3.googleusercontent.com/r7n9oBRrWiJiSLMbeiZDcSRb-IiGlbBksInpzsiOqCSWGcwRHtiuI1y6Zr3O5Ls1Lw=h900-rw",
       "https://lh3.googleusercontent.com/PCXFxjtZbz-JMKaeLNqt5kEs-CWk_ZMub41BUejcYO94bn9rRLRVfQGNJiQYniGaqG8Q=h900-rw"
     ],
-    "links": [
-      {
+    "links": [{
         "name": "PlayStore",
         "icon": "android",
         "link": "https://play.google.com/store/apps/details?id=com.HighwalkerStudios.ReeferMadnessFree"
