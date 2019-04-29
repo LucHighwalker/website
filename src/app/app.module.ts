@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -24,6 +24,13 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { PictureComponent } from './picture/picture.component';
+
+export class CustomHammerConfig extends HammerGestureConfig  {
+    overrides = <any>{
+        'pinch': { enable: false },
+        'rotate': { enable: false }
+    }
+}
 
 
 @NgModule({
@@ -60,7 +67,11 @@ import { PictureComponent } from './picture/picture.component';
     providers: [
         GlobalData,
         Gallery,
-        Project
+        Project,
+        {
+            provide: HAMMER_GESTURE_CONFIG,
+            useClass: CustomHammerConfig
+        }
     ],
     bootstrap: [AppComponent]
 })
