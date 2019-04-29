@@ -1,10 +1,10 @@
 <ng-template #pageTemplate>
   <div class="page projects">
     <div class="projects_title">
-      <luc-blueify [blueifyType]="'h1'" [content]="'Projects'"></luc-blueify>
+      <luc-blueify [blueifyType]="'h1'" [content]="'Noteable Projects'"></luc-blueify>
     </div>
 
-    <div class="projectBackdrop" (click)="closeProjects()"></div>
+    <div class="project_backdrop" (click)="closeProjects()"></div>
 
     <luc-project
       *ngFor="let project of projects; index as i"

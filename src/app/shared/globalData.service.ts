@@ -4,9 +4,6 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class GlobalData {
-  private activePage = 0;
-  private indicatorOffset = '140px';
-
   public router: Router;
 
   public pageChange = new Subject<number>();
@@ -14,16 +11,10 @@ export class GlobalData {
   public showPDF = new Subject<boolean>();
   public showEmail = new Subject<boolean>();
 
-  getActivePage() {
-    return this.activePage;
-  }
-
-  getIndicatorOffset() {
-    return this.indicatorOffset;
-  }
-
   setRouter(router: Router) {
-    this.router = router;
+    if (this.router === undefined) {
+      this.router = router;
+    }
   }
 
   pageLoaded(page: number) {

@@ -17,6 +17,10 @@
     -o-user-select: none;
     transition: all 1.25s;
     cursor: pointer;
+
+    .background {
+      top: 0px;
+    }
 }
 
 .button:hover {
