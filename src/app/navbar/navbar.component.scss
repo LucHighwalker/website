@@ -58,7 +58,7 @@
 }
 
 .navigation_button {
-  color: #239dee;
+  color: white;
   position: relative;
   top: 13px;
   display: inline-block;
@@ -74,7 +74,7 @@
 }
 
 .navigation_button:hover {
-  color: white;
+  color: #239dee;
   transform: scale(1.25, 1.25);
 }
 
@@ -103,5 +103,16 @@
   .indicator {
     top: auto;
     bottom: 14px;
+    border-color: #239dee;
+  }
+
+  .navigation_button:hover {
+    color: white;
+    transform: scale(1, 1);
+  }
+
+  .navigation_button.selected {
+    color: #239dee;
+    transform: scale(1, 1);
   }
 }
