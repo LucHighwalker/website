@@ -42,4 +42,12 @@ export class PageComponent implements OnInit {
     this.globalData.setRouter(this.router);
     this.globalData.pageLoaded(this.pageIndex);
   }
+
+  swipeLeft(event: Event) {
+    this.globalData.setActivePage(this.pageIndex + 1)
+  }
+
+  swipeRight(event: Event) {
+    this.globalData.setActivePage(this.pageIndex - 1)
+  }
 }

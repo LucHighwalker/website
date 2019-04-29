@@ -1,4 +1,6 @@
 <div class="page_container"
-     [@enterPage]="true">
+     [@enterPage]="true"
+     (swipeleft)="swipeLeft($event)"
+     (swiperight)="swipeRight($event)">
      <ng-container *ngTemplateOutlet="pageTemplate"></ng-container>
 </div>

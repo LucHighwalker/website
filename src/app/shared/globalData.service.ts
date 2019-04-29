@@ -32,6 +32,12 @@ export class GlobalData {
         this.showEmail.next(false);
       }
 
+      if (page > 3) {
+        page = 0;
+      } else if (page < 0) {
+        page = 3;
+      }
+
       let url = 'not-found';
       switch (page) {
         case 0:
