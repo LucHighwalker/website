@@ -75,6 +75,7 @@
   },
   {
     "title": "luc.gg",
+    "image": "assets/images/lightsaber.png",
     "description": "Designed to work well on mobile or desktop, without changing the looks of the site. This site works as my resume.",
     "frameworks": "Angular",
     "links": [{
