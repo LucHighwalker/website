@@ -5,8 +5,9 @@ img {
 
 .background {
     position: fixed;
-    top: 0;
-    height: 100%;
+    bottom: 0;
+    height: 100vh;
+    min-height: 100%;
     width: auto;
     opacity: 0.35;
     pointer-events: none;
