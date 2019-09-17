@@ -6,6 +6,8 @@ import { Subject } from 'rxjs/Subject';
 export class GlobalData {
   public router: Router;
 
+  public currentPage: number = 0;
+
   public pageChange = new Subject<number>();
 
   public showPDF = new Subject<boolean>();
@@ -56,6 +58,8 @@ export class GlobalData {
           url = 'contact';
           break;
       }
+
+      this.currentPage = page;
 
       this.router.navigate(['/', url]);
     }
