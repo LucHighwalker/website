@@ -1,6 +1,12 @@
-<div class="page_container"
-     [@enterPage]="true"
-     (swipeleft)="swipeLeft($event)"
-     (swiperight)="swipeRight($event)">
-     <ng-container *ngTemplateOutlet="pageTemplate"></ng-container>
+<div class="page_container desktop" [@enterPage]="true">
+  <ng-container *ngTemplateOutlet="pageTemplate"></ng-container>
+</div>
+
+<div
+  class="page_container mobile"
+  [@enterPage]="true"
+  (swipeleft)="swipeLeft($event)"
+  (swiperight)="swipeRight($event)"
+>
+  <ng-container *ngTemplateOutlet="pageTemplate"></ng-container>
 </div>

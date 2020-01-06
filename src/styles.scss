@@ -1,48 +1,48 @@
 ::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 html {
-    overflow-x: hidden;
-    cursor: default;
+  overflow-x: hidden;
+  cursor: default;
 }
 
 body {
-    font-family: Verdana, Geneva, sans-serif;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    height:100%;
-    min-width: 420px;
-    background-color: #393939;
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px #393939;
+  font-family: Verdana, Geneva, sans-serif;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  height: 100%;
+  min-width: 420px;
+  background-color: #393939;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px #393939;
 }
 
 h1 {
-    display: inline-block;
+  display: inline-block;
 }
 
 input {
-    background: #393939;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    outline: none;
-    padding: 5px;
-    text-align: left;
+  background: #393939;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  outline: none;
+  padding: 5px;
+  text-align: left;
 }
 
 textarea {
-    background: #393939;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    outline: none;
-    padding: 5px;
-    text-align: left;
+  background: #393939;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  outline: none;
+  padding: 5px;
+  text-align: left;
 }
 
 a {
@@ -68,14 +68,39 @@ a:hover {
 }
 
 .inline_display {
-    display: inline-block;
+  display: inline-block;
 }
 
 .background {
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-    opacity: 0.55;
-    background-color: #393939;
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  background-color: #393939;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .copyright {
+    top: 0;
+    bottom: auto;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 981px) {
+  .desktop {
+    display: block;
+  }
 }
